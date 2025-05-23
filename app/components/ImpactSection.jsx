@@ -4,17 +4,14 @@ import { FaUsers, FaUniversity, FaCertificate } from 'react-icons/fa';
 
 const stats = [
     {
-        icon: <FaUsers className="text-3xl text-black" />,
         value: '5000+',
         label: 'Learners Impacted',
     },
     {
-        icon: <FaUniversity className="text-3xl text-black" />,
         value: '100+',
         label: 'Partner Institutions',
     },
     {
-        icon: <FaCertificate className="text-3xl text-black" />,
         value: '200+',
         label: 'Certified Programs',
     },

@@ -1,43 +1,39 @@
 "use client"
-import { motion } from "motion/react"
-import { SlGraduation } from "react-icons/sl";
-import { BsBriefcase } from "react-icons/bs";
-import { LuNotebookPen } from "react-icons/lu";
-import { RiBuildingLine } from "react-icons/ri";
+import { useEffect, useRef } from "react"
+import { motion, useAnimation, useInView } from "motion/react"
+import { SlGraduation } from "react-icons/sl"
+import { BsBriefcase } from "react-icons/bs"
+import { LuNotebookPen } from "react-icons/lu"
+import { RiBuildingLine } from "react-icons/ri"
 
 import AboutSection from '@/public/assets/aboutsection-1.png'
 import Image from "next/image"
 
-
 const stats = [
-    {
-        icon: <SlGraduation className="text-3xl text-black" />,
-        label: 'Teachers',
-    },
-    {
-        icon: <BsBriefcase className="text-3xl text-black" />,
-        label: 'Enterprises',
-    },
-    {
-        icon: <LuNotebookPen className="text-3xl text-black" />,
-        label: 'Examiners',
-    },
-    {
-        icon: <RiBuildingLine className="text-3xl text-black" />,
-        label: 'Education Institutions',
-    },
-
+    { icon: <SlGraduation className="text-3xl text-black" />, label: 'Teachers' },
+    { icon: <BsBriefcase className="text-3xl text-black" />, label: 'Enterprises' },
+    { icon: <LuNotebookPen className="text-3xl text-black" />, label: 'Examiners' },
+    { icon: <RiBuildingLine className="text-3xl text-black" />, label: 'Education Institutions' },
 ]
 
 export default function EducationalCommunity() {
-    // Animation variants
+    const controls = useAnimation()
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, threshold: 0.2 })
+
+    useEffect(() => {
+        if (isInView) {
+            controls.start("visible")
+        }
+    }, [isInView, controls])
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.3,
+                staggerChildren: 0.25,
+                delayChildren: 0.2,
             },
         },
     }
@@ -61,24 +57,24 @@ export default function EducationalCommunity() {
     }
 
     return (
-        <div className="w-full bg-gray-50 py-16 px-4 md:px-8 lg:px-16">
+        <div className="w-full bg-gray-50 py-16 px-4 md:px-8 lg:px-16" ref={ref}>
             <motion.div
                 className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
                 initial="hidden"
-                animate="visible"
+                animate={controls}
                 variants={containerVariants}
             >
-                {/* Left side - Image */}
-                <motion.div className="hidden  md:flex justify-end h-full overflow-hidden" variants={imageVariants}>
+                {/* Left - Image */}
+                <motion.div className="hidden md:flex justify-end h-full overflow-hidden" variants={imageVariants}>
                     <Image
                         src={AboutSection}
                         alt="Students studying together"
                         width={500}
-                        className=" h-full object-cover rounded-4xl"
+                        className="h-full object-cover rounded-4xl"
                     />
                 </motion.div>
 
-                {/* Right side - Content */}
+                {/* Right - Content */}
                 <div className="space-y-8">
                     <motion.div className="space-y-2" variants={itemVariants}>
                         <p className="text-gray-600 uppercase tracking-tighter text-md font-light">WHO WE SERVE</p>
@@ -89,11 +85,14 @@ export default function EducationalCommunity() {
                         </h2>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-2 px-10 grid-cols-1  gap-6">
+                    <motion.div
+                        className="grid md:grid-cols-2 px-10 grid-cols-1 gap-6"
+                        variants={containerVariants}
+                    >
                         {stats.map((item, index) => (
                             <motion.div
                                 key={index}
-                                className="bg-white p-6 rounded-4xl  flex flex-col items-start text-center"
+                                className="bg-white p-6 rounded-4xl flex flex-col items-start text-center"
                                 variants={itemVariants}
                                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
                             >
@@ -103,7 +102,7 @@ export default function EducationalCommunity() {
                                 <h3 className="font-semibold text-lg">{item.label}</h3>
                             </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </motion.div>
         </div>

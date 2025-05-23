@@ -43,7 +43,7 @@ export default function TestimonialsSection() {
     }
 
     return (
-        <div className="w-full max-w-6xl mx-auto px-4 py-16">
+        <div className="w-full max-w-6xl overflow-hidden mx-auto px-4 py-16">
             <div className="text-center mb-8">
                 <h3 className="uppercase text-lg  tracking-tight text-gray-500">TESTIMONIALS</h3>
                 <h2 className="text-4xl tracking-tighter font-bold mt-2">What our users say</h2>
@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                         <div className="bg-darkgray/15 rounded-xl max-w-4xl -rotate-2 z-0 w-full  h-full absolute top-0 left-[50%] -translate-x-[50%] " />
 

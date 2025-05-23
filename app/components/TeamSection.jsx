@@ -1,5 +1,6 @@
 "use client"
-import { motion } from "framer-motion"
+import { useRef, useEffect } from "react"
+import { motion, useInView, useAnimation } from "framer-motion"
 
 import ProfilePic from '@/public/assets/profilepic.png'
 import Image from "next/image"
@@ -28,7 +29,16 @@ const TeamSection = () => {
         },
     ]
 
-    // Animation variants
+    const controls = useAnimation()
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, threshold: 0.2 })
+
+    useEffect(() => {
+        if (isInView) {
+            controls.start("visible")
+        }
+    }, [isInView, controls])
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -59,9 +69,14 @@ const TeamSection = () => {
     }
 
     return (
-        <section className="py-16 px-4 container mx-auto">
-            <motion.div initial="hidden" animate="visible" variants={containerVariants} className="text-center mb-12">
-                <motion.p variants={itemVariants} className="uppercase  tracking-tight text-darkgray/80 mb-2">
+        <section className="py-16 px-4 container mx-auto" ref={ref}>
+            <motion.div
+                initial="hidden"
+                animate={controls}
+                variants={containerVariants}
+                className="text-center mb-12"
+            >
+                <motion.p variants={itemVariants} className="uppercase tracking-tight text-darkgray/80 mb-2">
                     OUR TEAM
                 </motion.p>
                 <motion.h2 variants={itemVariants} className="text-4xl tracking-tighter font-bold mb-8">
@@ -81,7 +96,12 @@ const TeamSection = () => {
                 </motion.div>
             </motion.div>
 
-            <motion.div variants={containerVariants} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                animate={controls}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            >
                 {teamMembers.map((member, index) => (
                     <motion.div
                         key={index}
@@ -93,7 +113,7 @@ const TeamSection = () => {
                             <Image src={member.image} alt={member.name} className="w-full h-full object-cover" />
                         </div>
                         <h3 className="font-semibold text-lg text-center tracking-tighter">{member.name}</h3>
-                        <p className="text-gray-600 text-center ">{member.role}</p>
+                        <p className="text-gray-600 text-center">{member.role}</p>
                     </motion.div>
                 ))}
             </motion.div>

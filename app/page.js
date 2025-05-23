@@ -10,7 +10,7 @@ import WorkSteps from "./components/WorkSteps";
 export default function Home() {
   return (
     <>
-      <HomeHero />;
+      <HomeHero />
       <HomeAbout />
       <LearningPathways />
       <WorkSteps />
