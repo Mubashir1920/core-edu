@@ -28,13 +28,13 @@ export default function WorkSteps() {
                 </h2>
             </div>
             <div className="flex flex-col lg:flex-row items-start w-full gap-5  px-10 md:px-2  py-10">
-                <div className="flex flex-col lg:flex-row lg:justify-end lg:items-end  gap-4 w-full ">
+                <div className="flex flex-col lg:flex-row lg:justify-end lg:items-end  gap-4 w-full">
                     <motion.div
                         variants={cardVariants}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}
-                        className="bg-white w-full  lg:w-[45%] hover:shadow-sm transition-colors duration-300 px-6 py-5 rounded-4xl flex flex-col justify-between"
+                        className="bg-white w-full  lg:w-[45%] hover:bg-muted-100/30 border border-white hover:border-muted-400/70  transition-colors duration-500 px-6 py-5 rounded-4xl flex flex-col justify-between"
                     >
                         <div className="flex justify-between items-start">
                             <Image src={Step1} width={60} alt="Step-1" />
@@ -51,7 +51,7 @@ export default function WorkSteps() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}
-                        className="bg-white w-full lg:w-[45%] hover:shadow-sm transition-colors duration-300 px-6 py-5 rounded-4xl flex flex-col justify-between"
+                        className="bg-white w-full lg:w-[45%] px-6 py-5 rounded-4xl flex flex-col justify-between hover:bg-muted-100/30 border border-white hover:border-muted-400/70  transition-colors duration-500 "
                     >
                         <div className="flex justify-between items-start">
                             <Image src={Step2} width={60} alt="Step-2" />
@@ -70,7 +70,7 @@ export default function WorkSteps() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}
-                        className="bg-white w-full lg:w-[45%] hover:shadow-sm transition-colors duration-300 px-6 py-5 rounded-4xl flex flex-col justify-between"
+                        className="bg-white w-full lg:w-[45%] px-6 py-5 rounded-4xl flex flex-col justify-between hover:bg-muted-100/30 border border-white hover:border-muted-400/70  transition-colors duration-500 "
                     >
                         <div className="flex justify-between items-start">
                             <Image src={Step3} width={60} alt="Step-3" />
@@ -87,7 +87,7 @@ export default function WorkSteps() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}
-                        className="bg-white w-full  lg:w-[45%] hover:shadow-sm transition-colors duration-300 px-6 py-5 rounded-4xl flex flex-col justify-between"
+                        className="bg-white w-full  lg:w-[45%] px-6 py-5 rounded-4xl flex flex-col justify-between hover:bg-muted-100/30 border border-white hover:border-muted-400/70  transition-colors duration-500 "
                     >
                         <div className="flex justify-between items-start">
                             <Image src={Step4} width={60} alt="Step-4" />

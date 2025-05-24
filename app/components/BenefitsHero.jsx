@@ -1,29 +1,25 @@
 'use client'
 import { motion } from 'motion/react'
 import Image from 'next/image'
-import { LuArrowUpRight, LuNotebookPen } from 'react-icons/lu'
+import { LuNotebookPen } from 'react-icons/lu'
+import GetStartedBtn from './GetStartedBtn'
+
 import BenefitsHeroImg from '@/public/assets/benefitsherobg.png'
 import BenefitsHero2 from '@/public/assets/benefitshero2.png'
+import EduProLogo from '@/public/assets/edupro-logo-1.png'
 
 const BenefitsHero = () => {
     return (
         <>
-            <section className="container mx-auto py-10   px-4 md:pt-20  " >
+            <section className="container mx-auto py-10    px-4 md:pt-20  " >
                 <h1 className="text-center text-black  px-2 font-bold tracking-tighter leading-8 md:leading-12 capitalize text-[35px] md:text-[50px] " >
                     <span className=" text-primary">Benefits</span> of Core Education
                 </h1>
                 <p className=" text-black tracking-tight text-sm md:text-lg w-full md:w-[50%] mx-auto capitalize text-center mt-5 " >
                     Empowering educators, students, and institutions through scalable, flexible, and impactful learning solutions
                 </p>
-                <div className="w-full  flex justify-center my-5 " >
-                    <button className="bg-primary text-md hover:bg-primary/90 cursor-pointer rounded-3xl text-background py-3 px-6 block text-center" >
-                        Get Started
-                    </button>
-                    <span className="bg-primary text-white rounded-[100%] hover:bg-primary/90 cursor-pointer p-3 flex justify-center items-center  " >
-                        <LuArrowUpRight size={22} />
-                    </span>
-                </div>
-                <div className="rounded-3xl block overflow-hidden h-[300px] md:h-[340px]">
+                <GetStartedBtn />
+                <div className="rounded-3xl block  overflow-hidden h-[300px] md:h-[340px]">
                     <Image
                         src={BenefitsHeroImg}
                         alt="Technology interface with digital elements"
@@ -34,7 +30,7 @@ const BenefitsHero = () => {
                     />
                 </div>
             </section>
-            <div className='flex flex-col max-w-6xl pt-10 md:pt-20 px-4 gap-10 pb-10 md:pb-0 mx-auto md:flex-row justify-between items-start tracking-tighter' >
+            <div className='flex flex-col max-w-6xl  pt-10 md:pt-20 px-4 gap-10 pb-10 md:pb-0 mx-auto md:flex-row justify-between items-start tracking-tighter' >
                 <div className='md:w-1/2 w-full  space-y-3' >
                     <p className='text-darkgray/70 uppercase ' >Powered by EduPro</p>
                     <h1 className='text-4xl font-bold' >
@@ -47,11 +43,17 @@ const BenefitsHero = () => {
                         Whether you’re aiming to teach in private schools across Pakistan, in global curricula such as IB or IGCSE, or explore online education platforms, a Core Ed qualification becomes your passport to opportunity.
                     </p>
                 </div>
-                <div className='md:w-[40%] w-full ' >
+                <div className='md:w-[40%] w-full relative ' >
                     <Image
                         src={BenefitsHero2}
                         alt='Powered by EduPro'
                         className='rounded-3xl'
+                    />
+                    <Image
+                        src={EduProLogo}
+                        alt='Powered by EduPro'
+                        width={200}
+                        className='px-4 py-2 absolute -top-5 right-2  bg-white/70 backdrop-blur-sm rounded-2xl'
                     />
                 </div>
                 <div className="md:hidden absolute top-[70vh] right-0 flex py-5 overflow-hidden justify-end">

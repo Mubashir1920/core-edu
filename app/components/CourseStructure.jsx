@@ -1,25 +1,8 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { FaGraduationCap, FaCertificate, FaAward } from "react-icons/fa"
+import { motion } from "motion/react"
 
 export default function CourseStructure() {
-    const [isMobile, setIsMobile] = useState(false)
-
-    useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768)
-        }
-
-        checkMobile()
-        window.addEventListener("resize", checkMobile)
-
-        return () => {
-            window.removeEventListener("resize", checkMobile)
-        }
-    }, [])
-
     const steps = [
         {
             title: "Certificate",
@@ -63,7 +46,7 @@ export default function CourseStructure() {
         show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } },
     }
 
-    const lineVariant = {
+    const horizontalLineVariant = {
         hidden: { width: "0%" },
         show: {
             width: "100%",
@@ -90,83 +73,62 @@ export default function CourseStructure() {
             <motion.h1
                 className="text-4xl tracking-tighter font-bold mb-16 text-center md:text-left"
                 initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
             >
                 Course & Credit Structure
             </motion.h1>
 
-            {isMobile ? (
-                // Mobile vertical layout
-                <motion.div className="relative pl-8" variants={container} initial="hidden" animate="show">
-                    {/* Vertical timeline line */}
-                    <div className="absolute top-0 left-[31px] w-[2px] h-full bg-primary z-0"></div>
-                    <motion.div
-                        className="absolute top-0 left-[11px] w-[2px] bg-primary   z-10"
-                        variants={verticalLineVariant}
-                    ></motion.div>
+            <motion.div
+                className="relative"
+                variants={container}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.3 }}
+            >
+                {/* Timeline line */}
+                <div className="hidden md:block absolute top-[11px] left-0 w-full h-[2px] bg-gray-100 z-0"></div>
+                <motion.div
+                    className="hidden md:block absolute top-[11px] left-0 h-[2px] bg-primary z-10"
+                    variants={horizontalLineVariant}
+                />
 
-                    {/* Steps */}
-                    <div className="flex flex-col space-y-12 relative z-20">
-                        {steps.map((step, index) => (
-                            <motion.div key={index} className="flex items-start" variants={item}>
-                                {/* Circle */}
-                                <motion.div
-                                    className={`absolute left-0 w-[22px] h-[22px] rounded-full border-[3px] border-white -translate-x-1/2 ${step.color}`}
-                                    whileHover={{ scale: 1.2 }}
-                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                                />
+                {/* Vertical line for mobile */}
+                <div className="md:hidden absolute top-0 left-[31px] w-[2px] h-full bg-darkgray/30 z-0"></div>
+                <motion.div
+                    className="md:hidden absolute top-0 left-[31px] w-[2px] bg-primary z-10"
+                    variants={verticalLineVariant}
+                />
 
-                                {/* Content */}
-                                <motion.div
-                                    className="ml-6"
-                                    whileHover={{ x: 5 }}
-                                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                                >
-                                    <h3 className="text-xl font-medium mb-2">{step.title}</h3>
-                                    <p className="text-base font-medium">{step.courses} Courses</p>
-                                    <p className="text-sm text-gray-600">{step.creditHours} Credit Hours</p>
-                                </motion.div>
+                <div className="flex flex-col md:flex-row md:justify-between relative z-20 gap-12 md:gap-0">
+                    {steps.map((step, index) => (
+                        <motion.div
+                            key={index}
+                            variants={item}
+                            className="flex md:flex-col items-start md:items-center relative md:static pl-8 md:pl-0"
+                        >
+                            {/* Circle */}
+                            <motion.div
+                                className={`absolute md:static left-[31px] w-[22px] h-[22px] rounded-full border-[3px] border-white -translate-x-1/2 md:translate-x-0 ${step.color}`}
+                                whileHover={{ scale: 1.2 }}
+                                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                            />
+
+                            {/* Content */}
+                            <motion.div
+                                className="ml-6 md:ml-0 mt-0 md:mt-6 text-left md:text-center"
+                                whileHover={{ x: 5, y: -5 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                            >
+                                <h3 className="text-xl font-medium mb-2 whitespace-nowrap">{step.title}</h3>
+                                <p className="text-base font-medium">{step.courses} Courses</p>
+                                <p className="text-sm text-gray-600">{step.creditHours} Credit Hours</p>
                             </motion.div>
-                        ))}
-                    </div>
-                </motion.div>
-            ) : (
-                // Desktop horizontal layout
-                <motion.div className="relative" variants={container} initial="hidden" animate="show">
-                    {/* Timeline line */}
-                    <div className="absolute top-[11px] left-0 w-full h-[2px] bg-gray-100 z-0"></div>
-                    <motion.div
-                        className="absolute top-[11px] left-0 h-[2px] bg-primary z-10"
-                        variants={lineVariant}
-                    ></motion.div>
-
-                    {/* Steps */}
-                    <div className="flex justify-between relative z-20">
-                        {steps.map((step, index) => (
-                            <motion.div key={index} className="flex flex-col items-center" variants={item}>
-                                {/* Circle */}
-                                <motion.div
-                                    className={`w-[22px] h-[22px] rounded-full border-[3px] border-white ${step.color}`}
-                                    whileHover={{ scale: 1.2 }}
-                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                                />
-
-                                {/* Title */}
-                                <motion.div
-                                    className="mt-6 text-center w-full px-1"
-                                    whileHover={{ y: -5 }}
-                                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                                >
-                                    <h3 className="text-xl tracking-tight font-semibold mb-2 whitespace-nowrap">{step.title}</h3>
-                                    <p className=" font-medium">{step.courses} Courses</p>
-                                    <p className=" text-darkgray/70">{step.creditHours} Credit Hours</p>
-                                </motion.div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </motion.div>
-            )}
+                        </motion.div>
+                    ))}
+                </div>
+            </motion.div>
         </div>
     )
 }

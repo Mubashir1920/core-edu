@@ -89,7 +89,7 @@ export default function FeatureSlider() {
     return (
         <div className="w-full container mx-auto px-4 sm:px-6 lg:px-8 py-12">
             {/* Heading */}
-            <div className="mb-12">
+            <div className="mb-20">
                 <p className="text-darkgray/70 uppercase tracking-tighter" >Core Features</p>
                 <h1 className="text-4xl tracking-tighter font-bold text-black">
                     Everything you need to <span className="text-primary">teach</span>
@@ -120,22 +120,22 @@ export default function FeatureSlider() {
                 {/* Cards container */}
                 <div ref={containerRef} className="overflow-hidden md:px-5 px-0 ">
                     <motion.div
-                        className="flex gap-0 sm:gap-6"
+                        className="flex  gap-0 sm:gap-6"
                         animate={{ x: `-${currentIndex * (100 / cardsPerView)}%` }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     >
                         {featureCards.map((card) => (
                             <motion.div
                                 key={card.id}
-                                className={`flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-16px)]`}
+                                className={`flex-shrink-0 w-full  rounded-4xl group sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-16px)]`}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -20 }}
                                 transition={{ duration: 0.3 }}
                             >
-                                <div className="bg-lightgray rounded-4xl overflow-hidden h-full px-5 py-6  md:py-4 flex flex-col">
+                                <div className="bg-lightgray hover:bg-muted-100/30 border border-white hover:border-muted-400/70  transition-colors duration-500 space-y-7 rounded-4xl overflow-hidden h-full px-5 py-6  md:py-4 flex flex-col">
                                     <div className="relative h-56 sm:h-48">
-                                        <Image src={card.image || "/placeholder.svg"} alt={card.title} fill className="object-cover rounded-4xl" />
+                                        <Image src={card.image} alt={card.title} fill className="object-cover rounded-4xl" />
                                     </div>
                                     <div className=" py-2 flex flex-col flex-grow">
                                         <h3 className="text-xl tracking-tight font-bold mb-2">{card.title}</h3>

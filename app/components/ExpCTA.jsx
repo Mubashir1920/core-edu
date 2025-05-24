@@ -21,18 +21,16 @@ const ExperienceCTA = () => {
 
                 {/* Right Text + Button */}
                 <div className=" space-y-3">
-                    <p className="text-sm text-gray-600">
+                    <p className=" text-gray-600">
                         Explore our learning platform and discover how
                         <br className="hidden md:block" />
                         Core Education can empower your growth.
                     </p>
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="bg-primary text-white text-sm px-5 py-2 rounded-full"
+                    <button
+                        className="bg-primary text-white hover:bg-muted-100/30 border border-white hover:border-muted-400/70  transition-colors hover:text-primary duration-500 px-5 py-2 rounded-full"
                     >
                         Get Started
-                    </motion.button>
+                    </button>
                 </div>
             </motion.div>
         </section>

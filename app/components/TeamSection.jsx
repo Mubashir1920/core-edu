@@ -87,9 +87,7 @@ const TeamSection = () => {
                     <motion.button
                         variants={buttonVariants}
                         initial="initial"
-                        whileHover="hover"
-                        whileTap="tap"
-                        className="flex items-center gap-2 px-6 py-3 rounded-full border border-muted-100 text-sm font-medium hover:bg-gray-50 transition-colors"
+                        className="px-6 py-3 rounded-full border border-muted-100 bg-muted-100/10 hover:bg-muted-100/30  hover:border-muted-100/30 duration-500 transition-colors"
                     >
                         <span>Become a part</span>
                     </motion.button>
@@ -106,7 +104,6 @@ const TeamSection = () => {
                     <motion.div
                         key={index}
                         variants={itemVariants}
-                        whileHover={{ y: -5 }}
                         className="rounded-4xl p-6 bg-lightgray"
                     >
                         <div className="aspect-square bg-gray-100 rounded-3xl mb-4 overflow-hidden">

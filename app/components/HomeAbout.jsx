@@ -53,7 +53,7 @@ const HomeAbout = () => {
 
             // Get appropriate class
             let className = ""
-            if (isPathways) className = "text-teal-600 font-semibold"
+            if (isPathways) className = "text-primary font-semibold"
 
             // Split into letters
             const letters = word.split("").map((letter, j) => (
@@ -84,8 +84,8 @@ const HomeAbout = () => {
     return (
         <div className="flex justify-center items-center px-5 py-10">
             <div ref={containerRef} className="bg-lightgray rounded-4xl py-12 px-6 md:px-28 w-6xl max-w-7xl text-left">
-                <p className="text-md text-gray-400 tracking-tight mb-4 text-center uppercase">About</p>
-                <p className="text-3xl md:text-4xl  font-semibold tracking-tight leading-8 md:leading-10 text-black">{splitWords(mainText)}</p>
+                <p className="text-md text-gray-400 tracking-tight mb-2 text-center uppercase">About</p>
+                <p className="text-3xl md:text-[34px] font-semibold tracking-tighter leading-8 md:leading-10 text-black">{splitWords(mainText)}</p>
             </div>
         </div>
     )

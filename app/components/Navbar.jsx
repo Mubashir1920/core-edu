@@ -6,7 +6,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
-import HeaderLogo from '@/public/assets/Core-Education-Logo-black.png';
+import HeaderLogo from '@/public/assets/Core-Logo.png';
 import MobileNav from "./MobileNav";
 
 const navLinks = [
@@ -34,7 +34,7 @@ export default function Navbar() {
             <div className="container px-5  mx-auto flex justify-between items-center">
                 {/* Logo */}
                 <Link href='/' className="cursor-pointer" >
-                    <Image src={HeaderLogo} width={110} alt="Core-Education-Logo" />
+                    <Image src={HeaderLogo} className="w-32 "  alt="Core-Education-Logo" />
                 </Link>
                 <div className="hidden lg:block" >
                     {/* Navigation */}

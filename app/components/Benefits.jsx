@@ -74,13 +74,13 @@ export default function BenefitsSection() {
                     {benefits.map((benefit, index) => (
                         <motion.div
                             key={index}
-                            className="bg-white rounded-4xl px-8 py-10  "
+                            className="bg-white group hover:bg-muted-100/30 border border-white hover:border-muted-400/70  transition-colors duration-500 rounded-4xl px-8 py-10  "
                             variants={item}
                         >
                             <div className="flex flex-col items-start">
                                 <h3 className="text-2xl  font-semibold tracking-tight mb-2">{benefit.title}</h3>
-                                <div className="bg-primary/5 p-5 rounded-3xl mb-4">
-                                    <benefit.icon size={28} className=" text-primary" />
+                                <div className="bg-primary/5 p-5 rounded-3xl mb-4 group-hover:bg-white/80 transition-colors duration-700">
+                                    <benefit.icon size={28} className=" text-primary " />
                                 </div>
                                 <p className="text-gray-600 text-[18px] tracking-tight ">{benefit.description}</p>
                             </div>

@@ -94,7 +94,6 @@ export default function EducationalCommunity() {
                                 key={index}
                                 className="bg-white p-6 rounded-4xl flex flex-col items-start text-center"
                                 variants={itemVariants}
-                                whileHover={{ y: -5, transition: { duration: 0.2 } }}
                             >
                                 <div className="w-10 h-10 flex items-center justify-center mb-20 md:mb-10">
                                     {item.icon}

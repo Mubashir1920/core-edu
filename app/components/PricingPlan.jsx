@@ -222,7 +222,7 @@ export default function PricingComponent() {
                                 ))}
                             </AnimatePresence>
                         </ul>
-                        <button className="w-full text-lg py-2 px-4 rounded-3xl border border-whtie  text-white ">
+                        <button className="w-full hover:bg-white hover:text-primary hover:border-none duration-500 transition-all text-lg py-2 px-4 rounded-3xl border border-whtie  text-white ">
                             Start learning
                         </button>
                     </motion.div>

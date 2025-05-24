@@ -1,6 +1,7 @@
 import Image from 'next/image'
-import { LuArrowUpRight, LuNotebookPen } from 'react-icons/lu'
+import {  LuNotebookPen } from 'react-icons/lu'
 import FeatureImage1 from '@/public/assets/features-1.png'
+import GetStartedBtn from './GetStartedBtn'
 
 const FeaturesHero = () => {
     return (
@@ -12,14 +13,7 @@ const FeaturesHero = () => {
                 <p className=" text-black text-sm md:text-lg w-full md:w-[50%] tracking-tight mx-auto capitalize text-center mt-5 " >
                     Empowering educators and institutions with scalable, smart tools for impactful learning experiences.
                 </p>
-                <div className="w-full  flex justify-center my-5 " >
-                    <button className="bg-primary text-md hover:bg-primary/90 cursor-pointer rounded-3xl text-background py-3 px-6 block text-center" >
-                        Get Started
-                    </button>
-                    <span className="bg-primary text-white rounded-[100%] hover:bg-primary/90 cursor-pointer p-3 flex justify-center items-center  " >
-                        <LuArrowUpRight size={22} />
-                    </span>
-                </div>
+                <GetStartedBtn />
                 <div className="rounded-3xl block overflow-hidden h-[300px] md:h-[300px]">
                     <Image
                         src={FeatureImage1}

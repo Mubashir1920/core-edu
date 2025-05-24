@@ -14,6 +14,7 @@ import PathwaysImg from "@/public/assets/pathways-1.png"
 import PathwaysImg2 from "@/public/assets/pathways-2.png"
 import PathwaysImg3 from "@/public/assets/pathways-3.png"
 import { FaPeopleRoof } from "react-icons/fa6"
+import GetStartedBtn from "./GetStartedBtn"
 
 const categories = [
     {
@@ -43,22 +44,22 @@ const categoryDetails = [
         image: PathwaysImg,
         boxes: [
             {
-                icon: <FaWrench className="w-5 h-5 text-primary" />,
+                icon: <FaWrench size={25} className=" text-primary" />,
                 title: "Workshops & Micro-PDs",
                 description: "Specialized training on teaching strategies, technology integration, and classroom management.",
             },
             {
-                icon: <FaLaptop className="w-5 h-5 text-primary" />,
+                icon: <FaLaptop size={25} className=" text-primary" />,
                 title: "Online/Hybrid",
                 description: "Learn at your pace with flexible online and hybrid learning options.",
             },
             {
-                icon: <SiAdguard className="w-5 h-5 text-primary" />,
+                icon: <SiAdguard size={25} className=" text-primary" />,
                 title: "Recognized Certification",
                 description: "Recognized credentials in specific subject areas or pedagogical techniques.",
             },
             {
-                icon: <HiOutlineRectangleStack className="w-5 h-5 text-primary" />,
+                icon: <HiOutlineRectangleStack size={25} className=" text-primary" />,
                 title: "Stackable Learning",
                 description: "Credits from completed courses can be converted into academic credit toward a degree.",
             },
@@ -76,22 +77,22 @@ const categoryDetails = [
         image: PathwaysImg2,
         boxes: [
             {
-                icon: <LuBadgeCheck className="w-5 h-5 text-primary" />,
+                icon: <LuBadgeCheck size={25} className=" text-primary" />,
                 title: "Certificate Programs",
                 description: "For specialization in a particular teaching skill or subject.",
             },
             {
-                icon: <LuBrain className="w-5 h-5 text-primary" />,
+                icon: <LuBrain size={25} className=" text-primary" />,
                 title: "Postgraduate Diplomas",
                 description: "Advanced specialization for experienced teachers.",
             },
             {
-                icon: <LuBookOpen className="w-5 h-5 text-primary" />,
+                icon: <LuBookOpen size={25} className=" text-primary" />,
                 title: "Diplomas",
                 description: "Broader teaching competencies.",
             },
             {
-                icon: <LuGraduationCap className="w-5 h-5 text-primary" />,
+                icon: <LuGraduationCap size={25} className=" text-primary" />,
                 title: "Full Degrees",
                 description: "Comprehensive teacher education programs",
             },
@@ -108,32 +109,32 @@ const categoryDetails = [
         image: PathwaysImg3,
         boxes: [
             {
-                icon: <MdConnectedTv className="w-5 h-5 text-primary" />,
+                icon: <MdConnectedTv size={25} className=" text-primary" />,
                 title: "Needs Analysis",
                 description: "Meet with school management to assess teaching gaps and needs.",
             },
             {
-                icon: <PiPaintBrushBroadThin className="w-5 h-5 text-primary" />,
+                icon: <PiPaintBrushBroadThin size={25} className=" text-primary" />,
                 title: "Training Delivery",
                 description: "Execution of the training program on-site.",
             },
             {
-                icon: <PiHandshakeThin className="w-5 h-5 text-primary" />,
+                icon: <PiHandshakeThin size={25} className=" text-primary" />,
                 title: "On-Site Support",
                 description: "Continued assistance after training, if required, to ensure long-term impact",
             },
             {
-                icon: <LuNotebookPen className="w-5 h-5 text-primary" />,
+                icon: <LuNotebookPen size={25} className=" text-primary" />,
                 title: "Program Design",
                 description: "Customized training modules tailored to the school’s objectives.",
             },
             {
-                icon: < MdOutlineMessage className="w-5 h-5 text-primary" />,
+                icon: < MdOutlineMessage size={25} className=" text-primary" />,
                 title: "Learning & Feedback Report",
                 description: "Post-training analysis to measure effectiveness.",
             },
             {
-                icon: <FaPeopleRoof className="w-5 h-5 text-primary" />,
+                icon: <FaPeopleRoof size={25} className=" text-primary" />,
                 title: "Face-to-Face",
                 description: "In-person sessions at your institution",
             },
@@ -210,13 +211,13 @@ export default function ProfessionalDevelopment() {
                                 }}
                                 whileTap={{ scale: 0.98 }}
                             >
-                                <div className="tracking-tight mb-2">{category.id}</div>
+                                <div className="tracking-tight ">{category.id}</div>
                                 <div className="tracking-tight leading-tight">
                                     {category.title.split(" ")[0]} <br />
                                     {category.title.split(" ")[1]}
                                 </div>
                                 <motion.div
-                                    className={`rounded-full bg-muted-400 ${index === activeCategory ? "opacity-100" : "opacity-0"} group-hover:opacity-100 duration-300 transition-opacity absolute right-5 text-white block p-2`}
+                                    className={`rounded-full bg-muted-400/50 ${index === activeCategory ? "opacity-100" : "opacity-0"} group-hover:opacity-100 duration-300 transition-opacity absolute right-5 text-white block p-2`}
                                     animate={index === activeCategory ? { rotate: 0 } : { rotate: -45 }}
                                     transition={{ duration: 0.3, type: "spring" }}
                                 >
@@ -229,7 +230,7 @@ export default function ProfessionalDevelopment() {
             </div>
             <section className="bg-lightgray">
                 <motion.div
-                    className="max-w-6xl mx-auto p-6 md:p-10 overflow-hidden"
+                    className="max-w-6xl mx-auto p-8 :p-10 overflow-hidden"
                     initial="hidden"
                     animate="visible"
                     variants={containerVariants}
@@ -245,24 +246,13 @@ export default function ProfessionalDevelopment() {
                             className="w-full"
                         >
                             {/* Heading and Description */}
-                            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+                            <div className="flex flex-col md:flex-row justify-between  items-start md:items-center mb-12">
                                 <motion.div variants={itemVariants} className="mb-6 md:mb-0">
                                     <h1 className="text-4xl tracking-tighter font-bold">{categoryDetails[activeCategory].heading}</h1>
                                 </motion.div>
-                                <motion.div variants={itemVariants} className="max-w-xs">
-                                    <p className="text-sm text-gray-600">{categoryDetails[activeCategory].description}</p>
-                                    <motion.div
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className="w-full flex justify-start my-5"
-                                    >
-                                        <button className="bg-primary text-md hover:bg-primary/90 cursor-pointer rounded-3xl text-background py-3 px-6 block">
-                                            Get Started
-                                        </button>
-                                        <span className="bg-primary text-white rounded-[100%] hover:bg-primary/90 cursor-pointer p-3 flex justify-center items-center">
-                                            <LuArrowUpRight size={22} />
-                                        </span>
-                                    </motion.div>
+                                <motion.div variants={itemVariants} className="max-w-xs text-right">
+                                    <p className="tracking-tight text-gray-600">{categoryDetails[activeCategory].description}</p>
+                                    <GetStartedBtn />
                                 </motion.div>
                             </div>
 
@@ -278,14 +268,14 @@ export default function ProfessionalDevelopment() {
                                         <motion.div
                                             key={idx}
                                             variants={itemVariants}
-                                            className="bg-white p-6 rounded-4xl"
+                                            className="bg-white p-8  rounded-4xl"
                                             whileHover={{ y: -5, transition: { duration: 0.2 } }}
                                         >
-                                            <div className="bg-muted-100/40 w-10 h-10 rounded-lg flex items-center justify-center mb-4">
+                                            <div className="bg-muted-100/40 w-12 h-12 rounded-lg flex items-center justify-center mb-20 md:mb-8  ">
                                                 {box.icon}
                                             </div>
-                                            <h3 className="font-semibold mb-2">{box.title}</h3>
-                                            <p className="text-sm text-gray-600">{box.description}</p>
+                                            <h3 className="font-semibold text-lg ">{box.title}</h3>
+                                            <p className="tracking-tight  md:w-[80%] text-gray-600">{box.description}</p>
                                         </motion.div>
                                     ))}
                                 </div>
@@ -316,14 +306,14 @@ export default function ProfessionalDevelopment() {
                                         <motion.div
                                             key={idx}
                                             variants={itemVariants}
-                                            className="bg-white p-6 rounded-4xl"
+                                            className="bg-white p-8  rounded-4xl"
                                             whileHover={{ y: -5, transition: { duration: 0.2 } }}
                                         >
-                                            <div className="bg-muted-100/40 w-10 h-10 rounded-lg flex items-center justify-center mb-4">
+                                            <div className="bg-muted-100/40 w-12 h-12 rounded-lg flex items-center justify-center mb-20 md:mb-8">
                                                 {box.icon}
                                             </div>
-                                            <h3 className="font-semibold mb-2">{box.title}</h3>
-                                            <p className="text-sm text-gray-600">{box.description}</p>
+                                            <h3 className="font-semibold ">{box.title}</h3>
+                                            <p className="tracking-tight text-gray-600">{box.description}</p>
                                         </motion.div>
                                     ))}
                                 </div>
@@ -332,7 +322,7 @@ export default function ProfessionalDevelopment() {
                     </AnimatePresence>
                 </motion.div>
             </section>
-            
+
         </>
     )
 }

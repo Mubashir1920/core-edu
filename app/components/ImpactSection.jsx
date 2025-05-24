@@ -51,9 +51,9 @@ export default function ImpactSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.2 }}
-                            className={`${index == 2 ? 'border-none' : 'lg:border-r border-r-0 lg:border-b-0 border-b'}  flex flex-col py-6 border-black/20 mx-20 lg:mx-0   md:px-20 items-center`}
+                            className={`${index == 2 ? 'border-none' : 'lg:border-r border-r-0 lg:border-b-0 border-b'}  flex flex-col py-6 border-black/20 mx-20 lg:mx-0  md:px-20 items-center`}
                         >
-                            <h3 className="text-5xl tracking-tight font-bold text-black">{item.value}</h3>
+                            <h3 className="text-5xl hover:text-primary transition-colors duration-500 cursor-default tracking-tight font-bold text-black">{item.value}</h3>
                             <p className="text-lg text-black tracking-tight mt-1">{item.label}</p>
                         </motion.div>
                     ))}

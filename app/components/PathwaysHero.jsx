@@ -1,6 +1,7 @@
 import Image from 'next/image'
-import { LuArrowUpRight, LuNotebookPen } from 'react-icons/lu'
+import {  LuNotebookPen } from 'react-icons/lu'
 import PathwaysHeroImg from '@/public/assets/pathways-hero-1.png'
+import GetStartedBtn from './GetStartedBtn'
 
 const PathwaysHero = () => {
     return (
@@ -12,14 +13,7 @@ const PathwaysHero = () => {
                 <p className=" text-black text-sm md:text-lg  tracking-tight w-full md:w-[50%] mx-auto capitalize text-center mt-5 " >
                     At Core Education, we believe in transforming education through innovative solutions tailored to your needs.
                 </p>
-                <div className="w-full  flex justify-center my-5 " >
-                    <button className="bg-primary text-md hover:bg-primary/90 cursor-pointer rounded-3xl text-background py-3 px-6 block text-center" >
-                        Get Started
-                    </button>
-                    <span className="bg-primary text-white rounded-[100%] hover:bg-primary/90 cursor-pointer p-3 flex justify-center items-center  " >
-                        <LuArrowUpRight size={22} />
-                    </span>
-                </div>
+                <GetStartedBtn />
                 <div className="rounded-3xl block overflow-hidden h-[300px]">
                     <Image
                         src={PathwaysHeroImg}

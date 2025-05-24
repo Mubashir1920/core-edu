@@ -1,9 +1,20 @@
+'use client';
+
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { RxCross2 } from 'react-icons/rx';
 import { FiSend } from 'react-icons/fi';
 import Image from 'next/image';
 
 import CoreLogo from '@/public/assets/core-eduation-whitelogo.png'
+import Link from 'next/link';
+
+const navLinks = [
+    { name: "Features", path: "/features" },
+    { name: "Benefits", path: "/benefits" },
+    { name: "Pathways", path: "/pathways" },
+    { name: "Pricing", path: "/pricing" },
+    { name: "Contact", path: "/contact" },
+];
 
 const Footer = () => {
     return (
@@ -32,15 +43,11 @@ const Footer = () => {
                             </button>
                         </div>
                     </div>
-
-
-
-
                 </div>
             </div>
             <div className="flex flex-col-reverse pt-14 md:flex-row md:justify-between items-start  gap-10 md:items-end">
 
-                <div className='flex justify-between items-end w-full' >
+                <div className='flex justify-between items-end w-full md:w-fit ' >
                     {/* Logo + Brand */}
                     <div className="mt-10 flex items-center gap-3">
                         <Image
@@ -65,11 +72,11 @@ const Footer = () => {
 
                 {/* Links */}
                 <div className="flex flex-wrap flex-col md:flex-row md:gap-8 gap-5 justify-end text-sm  font-light text-white/90">
-                    <p className='md:hidden block font-medium' >Quick Links</p>
-                    {['About', 'Features', 'Benefits', 'Pathways', 'Pricing', 'Contact'].map((item) => (
-                        <a href="#" key={item} className="hover:underline">
-                            {item}
-                        </a>
+                    <p className='md:hidden text-lg block font-medium' >Quick Links</p>
+                    {navLinks.map((item) => (
+                        <Link href={item.path} key={item.path} className="hover:underline">
+                            {item.name}
+                        </Link>
                     ))}
                 </div>
             </div>
