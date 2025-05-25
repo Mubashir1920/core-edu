@@ -93,21 +93,21 @@ const MobileNav = () => {
                                 </motion.li>
 
                                 {/* Dropdown */}
-                                <motion.li className="relative" variants={itemVariants}>
-                                    <button onClick={toggleDropdown} className="flex items-center gap-1">
-                                        Resources {isOpen ? <GoChevronUp /> : <GoChevronDown />}
+                                <motion.li variants={itemVariants}>
+                                    <button onClick={toggleDropdown} className="flex items-center cursor-pointer gap-1">
+                                        Resources <GoChevronDown className={`${isOpen ? 'rotate-180' : ''} transition-transform duration-500 `} />
                                     </button>
                                     <AnimatePresence>
                                         {isOpen && (
                                             <motion.ul
-                                                initial={{ opacity: 0, y: 10 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 10 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="absolute top-7 left-0 mt-2 w-max bg-white/10 backdrop-blur-lg shadow-light rounded-[21px] py-2"
+                                                initial={{ opacity: 0, height: 0 }}
+                                                animate={{ opacity: 1, height: "auto" }}
+                                                exit={{ opacity: 0, height: 0 }}
+                                                transition={{ duration: 0.3 }}
+                                                className="overflow-hidden mt-2 rounded-[21px] bg-white text-black  py-2 px-2"
                                             >
                                                 {dropdownItems.map((item, idx) => (
-                                                    <li key={idx} className="px-4 py-2 flex items-center justify-between gap-5">
+                                                    <li key={idx} className="px-4 py-2 flex items-center  justify-between gap-5">
                                                         {item}
                                                         <button className="py-[7px] text-sm cursor-pointer px-[19px] rounded-3xl border border-muted-100/50">
                                                             Download
@@ -118,6 +118,7 @@ const MobileNav = () => {
                                         )}
                                     </AnimatePresence>
                                 </motion.li>
+
 
                                 {navLinks.map((item) => (
                                     <motion.li key={item.name} variants={itemVariants}>

@@ -76,11 +76,11 @@ export default function EducationalCommunity() {
 
                 {/* Right - Content */}
                 <div className="space-y-8">
-                    <motion.div className="space-y-2" variants={itemVariants}>
+                    <motion.div className="space-y-2 md:text-left text-center" variants={itemVariants}>
                         <p className="text-gray-600 uppercase tracking-tighter text-md font-light">WHO WE SERVE</p>
-                        <h2 className="text-4xl tracking-tighter font-bold">
+                        <h2 className="text-4xl  tracking-tighter font-bold">
                             Supporting <span className="text-primary">community</span> of
-                            <br />
+                            <br className="hidden md:block" />
                             learners and professionals
                         </h2>
                     </motion.div>

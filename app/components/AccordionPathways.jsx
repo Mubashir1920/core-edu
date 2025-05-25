@@ -32,9 +32,11 @@ const AccordionPathways = () => {
                         <Image
                             src={Accordion1}
                             alt="Professional Development"
-                            width={200}
-                            className="w-full md:w-auto rounded-4xl"
+                            width={600}
+                            height={400}
+                            className="w-full max-w-md aspect-[3/2] object-cover rounded-4xl"
                         />
+
                         <div className="w-full">
                             <div className="flex flex-wrap gap-2 mt-3">
                                 <span className="px-4 py-2 bg-white rounded-full  md:text-md ">Online & Hybrid</span>
@@ -77,9 +79,11 @@ const AccordionPathways = () => {
                         <Image
                             src={Accordion2}
                             alt="Professional Development"
-                            width={200}
-                            className="w-full md:w-auto rounded-4xl"
+                            width={600}
+                            height={400}
+                            className="w-full max-w-md aspect-[3/2] object-cover rounded-4xl"
                         />
+
                         <div className="w-full">
                             <div className="flex flex-wrap gap-2 mt-3">
                                 <span className="px-4 py-2 bg-white rounded-full  md:text-md ">Certifications (2 courses)</span>
@@ -121,11 +125,13 @@ const AccordionPathways = () => {
                 <>
                     <div className="flex flex-col  max-w-full md:max-w-2xl md:items-start gap-4 py-4">
                         <Image
-                            src={Accordion3}
+                            src={Accordion3} 
                             alt="Professional Development"
-                            width={200}
-                            className="w-full md:w-auto rounded-4xl"
+                            width={600}
+                            height={400}
+                            className="w-full max-w-md aspect-[3/2] object-cover rounded-4xl"
                         />
+
                         <div className="w-full">
                             <div className="flex flex-wrap gap-2 mt-3">
                                 {[
@@ -173,11 +179,11 @@ const AccordionPathways = () => {
                 {items.map((item, index) => (
                     <div
                         key={index}
-                        className={`${activeIndex === index ? "bg-lightgray py-8 sm:py-12 md:py-20" : "bg-white py-3"} border-b border-gray-200 mx-auto  px-4 sm:px-8 md:px-16 lg:px-28`}
+                        className={`${activeIndex === index ? "bg-lightgray py-8 sm:py-12 md:py-20" : "bg-white py-3"} border-b border-gray-200 mx-auto   px-10 md:px-16 lg:px-28 transition-all duration-500`}
                     >
                         <button
                             onClick={() => toggleAccordion(index)}
-                            className="w-full flex flex-col sm:flex-row  cursor-pointer justify-between items-start sm:items-center py-3 sm:py-5 px-0 text-left focus:outline-none gap-3 sm:gap-0"
+                            className="w-full flex flex-col sm:flex-row relative  cursor-pointer justify-between items-start sm:items-center py-3 sm:py-5 px-0 text-left focus:outline-none gap-3 sm:gap-0"
                         >
                             <h3
                                 className={`${activeIndex === index ? "opacity-100" : "opacity-50"} text-xl sm:text-2xl font-semibold tracking-tighter`}
@@ -195,7 +201,7 @@ const AccordionPathways = () => {
                             <motion.div
                                 animate={{ rotate: activeIndex === index ? 90 : 0 }}
                                 transition={{ duration: 0.2 }}
-                                className="text-black self-end sm:self-center"
+                                className="text-black self-end  sm:self-center"
                             >
                                 <FiArrowUpRight size={24} />
                             </motion.div>

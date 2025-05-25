@@ -30,7 +30,7 @@ export default function AboutHero() {
                             className="w-full h-full object-cover"
                         />
                     </div>
-                    <div className="md:hidden absolute top-[70vh] right-0 flex py-5 overflow-hidden justify-end">
+                    <div className="md:hidden absolute top-[50vh] right-0 flex py-5 overflow-hidden justify-end">
                         <a href="#" className=" bg-primary text-white font-light  text-md pr-10 pl-4 py-4 rounded-xl hover:bg-primary/90 -mr-5 transition">
                             <LuNotebookPen className="inline-block mr-3" size={22} />
                             Take a Free Assessment Test
