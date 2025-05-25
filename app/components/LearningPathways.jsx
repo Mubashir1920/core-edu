@@ -1,6 +1,8 @@
 'use client'
 import { useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
+import { RiArrowRightUpLine } from "react-icons/ri";
 import Image from "next/image";
 
 import Image1 from "@/public/assets/learning-pathways-1.png";
@@ -69,14 +71,17 @@ export default function LearningPathways() {
                             transition={{ duration: 0.3 }}
                             className="bg-lightgray rounded-4xl p-4 md:p-6 "
                         >
-                            <div className="overflow-hidden rounded-4xl mb-4">
-                                <Image
-                                    src={tabs[activeTab].image}
-                                    alt={tabs[activeTab].title}
-                                    width={800}
-                                    height={400}
-                                    className="w-full h-auto object-cover"
-                                />
+                            <div className="overflow-hidden aspect-4/2 relative rounded-4xl mb-4">
+                                <Link href='/pathways' >
+                                    <Image
+                                        src={tabs[activeTab].image}
+                                        alt={tabs[activeTab].title}
+                                        width={800}
+                                        height={400}
+                                        className="w-full h-full  object-cover"
+                                    />
+                                    <RiArrowRightUpLine size={30} className="absolute text-white top-5 right-5" />
+                                </Link>
                             </div>
 
                             <div className="flex flex-wrap gap-2 mb-4">
