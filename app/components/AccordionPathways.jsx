@@ -20,7 +20,7 @@ const AccordionPathways = () => {
             title: "Professional Development",
             description: (
                 <p className="text-md leading-5 tracking-tight font-semibold">
-                    B2C – Upskilling & Training:{" "}
+                    For Indiviuals – Upskilling & Training:{" "}
                     <span className="font-normal">
                         Short-term learning for skill enhancement, which can later contribute to a formal degree if pursued.
                     </span>
@@ -67,7 +67,7 @@ const AccordionPathways = () => {
             title: "Professional Accreditation",
             description: (
                 <p className="text-[16px] leading-5 tracking-tight font-semibold">
-                    B2C – Degree-Awarding Programs:{" "}
+                    For Indiviuals – Degree-Awarding Programs:{" "}
                     <span className="font-normal">
                         Structured academic programs leading to formal qualifications.
                     </span>
@@ -115,7 +115,7 @@ const AccordionPathways = () => {
             title: "Customized Development",
             description: (
                 <p className="text-[16px] leading-5 tracking-tight font-semibold">
-                    B2B – Tailored Training:{" "}
+                    For Businesses – Tailored Training:{" "}
                     <span className="font-normal">
                         School-specific training programs designed for institutions based on their unique needs.
                     </span>

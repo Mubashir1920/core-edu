@@ -48,12 +48,10 @@ export default function AboutHero() {
 
                     <div className=" space-y-4 md:w-[50%] w-full font-medium  ">
                         <p className="text-black">
-                            Pellentesque nec ex et ipsum semper suscipit quis et elit. Ut sed lacinia metus, in congue augue. Integer
-                            pulvinar blandit orci, eu ultricorper elit porta elementum.
+                            Core Ed is a transformative learning platform designed to empower the next generation of educators. Built on the belief that great teaching changes lives, we offer accessible, flexible, and globally recognized training programs that help teachers grow—both personally and professionally
                         </p>
                         <p className="text-gray-700">
-                            Pellentesque nec ex et ipsum semper suscipit quis et elit. Ut sed lacinia metus, in congue augue. Integer
-                            pulvinar blandit orci, eu ultricorper elit porta elementum.
+                            Our partnership with EduPro ensures that every qualification earned through Core Ed meets international standards, opening doors to local and global opportunities alike. From private schools in Pakistan to international teaching platforms, Core Ed graduates are equipped to thrive in diverse educational environments. We are more than a certification provider—we are a community of passionate educators committed to reshaping education through quality, relevance, and impact.
                         </p>
                     </div>
                 </div>

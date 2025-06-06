@@ -19,15 +19,15 @@ import GetStartedBtn from "./GetStartedBtn"
 const categories = [
     {
         id: "01",
-        title: "Professional Development",
+        title: "Professional Development -  For Individuals",
     },
     {
         id: "02",
-        title: "Professional Accreditation",
+        title: "Professional Accreditation - For Individuals",
     },
     {
         id: "03",
-        title: "Customized Development",
+        title: "Customized Development - For Businesses",
     },
 ]
 
@@ -36,7 +36,7 @@ const categoryDetails = [
         heading: (
             <>
                 Professional <span className="text-primary">Development</span> <br className="hidden md:block" />
-                (B2C Upskilling & Training)
+                (Upskilling & Training)
             </>
         ),
         description:
@@ -69,7 +69,7 @@ const categoryDetails = [
     {
         heading: (
             <>
-                Professional<span className="text-primary"> Accreditation</span> <br className="hidden md:block" /> (B2C –
+                Professional<span className="text-primary"> Accreditation</span> <br className="hidden md:block" /> (
                 Degree-Awarding Programs)
             </>
         ),
@@ -102,7 +102,7 @@ const categoryDetails = [
     {
         heading: (
             <>
-                Customized <span className="text-primary">Development</span> <br className="hidden md:block" />(B2B – Tailored Institutional Training)
+                Customized <span className="text-primary">Development</span> <br className="hidden md:block" />(Tailored Institutional Training)
             </>
         ),
         description: "School-specific training programs designed for institutions based on their unique needs.",
@@ -213,8 +213,9 @@ export default function ProfessionalDevelopment() {
                             >
                                 <div className="tracking-tight ">{category.id}</div>
                                 <div className="tracking-tight leading-tight">
-                                    {category.title.split(" ")[0]} <br />
-                                    {category.title.split(" ")[1]}
+                                    {/* {category.title.split(" ")[0]} <br />
+                                    {category.title.split(" ")[1]} */}
+                                    {category.title}
                                 </div>
                                 <motion.div
                                     className={`rounded-full bg-muted-400/50 ${index === activeCategory ? "opacity-100" : "opacity-0"} group-hover:opacity-100 duration-300 transition-opacity absolute right-5 text-white block p-2`}
