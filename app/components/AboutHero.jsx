@@ -24,6 +24,7 @@ export default function AboutHero() {
                     <div className="rounded-3xl overflow-hidden col-span-1 h-[300px] md:h-[300px]">
                         <Image
                             src={HeroBg2}
+                            priority
                             alt="Person taking notes"
                             width={500}
                             height={250}

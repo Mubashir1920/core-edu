@@ -10,17 +10,17 @@ import { LuNotebookPen } from "react-icons/lu";
 import { motion } from "motion/react"
 
 const slides = [
-    <Image src={Image2} alt="Teaching Career" className="w-60 rounded-4xl object-cover " />,
+    <Image priority src={Image2} alt="Teaching Career" className="w-60 rounded-4xl object-cover " />,
     <div className="min-w-[250px] px-4 py-10 bg-lightgray rounded-4xl flex flex-col justify-between items-start gap-2">
-        <Image src={TeachingLogo} className="mb-5" alt="teaching-course" />
+        <Image priority src={TeachingLogo} className="mb-5" alt="teaching-course" />
         <p className="text-md leading-4 mt-5 font-semibold text-black">Advance your <br /> Teaching Career</p>
     </div>,
-    <Image src={Image3} alt="Writing on Laptop" className="rounded-4xl object-cover h-[340px]" />,
+    <Image priority src={Image3} alt="Writing on Laptop" className="rounded-4xl object-cover h-[340px]" />,
     <div className="min-w-[220px] px-4 py-8 bg-lightgray rounded-4xl flex flex-col justify-center items-center gap-2">
         <p className="text-sm -mb-3 text-primary">Certified with</p>
-        <Image src={EduProLogo} alt="edupro logo" width={120} />
+        <Image priority src={EduProLogo} alt="edupro logo" width={120} />
     </div>,
-    <Image src={Image1} alt="AI Education" className="rounded-4xl object-cover h-64" />
+    <Image priority src={Image1} alt="AI Education" className="rounded-4xl object-cover h-64" />
 ]
 
 // Duplicate the slides

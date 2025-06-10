@@ -290,6 +290,7 @@ export default function ProfessionalDevelopment() {
                                         whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
                                     >
                                         <Image
+                                            priority
                                             src={categoryDetails[activeCategory].image || "/placeholder.svg"}
                                             alt="Digital learning interface"
                                             className=" object-cover rounded-3xl"

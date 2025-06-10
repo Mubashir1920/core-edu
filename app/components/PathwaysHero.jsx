@@ -20,7 +20,7 @@ const PathwaysHero = () => {
                         alt="Technology interface with digital elements"
                         width={1000}
                         height={1000}
-                        priority={true}
+                        priority
                         className="w-full h-full object-cover"
                     />
                 </div>

@@ -1,7 +1,12 @@
-import React from 'react'
 import ContactForm from '../components/ContactForm'
 import ContactInfo from '../components/ContactInfo'
 import { LuNotebookPen } from 'react-icons/lu'
+
+export const metadata = {
+    title: 'Contact Core Education | Partner with Us',
+    description: 'Get in touch with the Core Education team to explore collaboration opportunities, request demos, or learn how we can support your institutional goals',
+}
+
 
 const page = () => {
     return (

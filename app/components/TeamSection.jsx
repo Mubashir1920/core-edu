@@ -3,28 +3,49 @@ import { useRef, useEffect } from "react"
 import { motion, useInView, useAnimation } from "framer-motion"
 
 import ProfilePic from '@/public/assets/profilepic.png'
+import Mussarat from '@/public/assets/Mussarat-Shahid-Core-Education.png'
+import Amil from '@/public/assets/Amil-Tamour-Daud-Khan-Core-Education.png'
+import Saman from '@/public/assets/Saman-Zahid-Core-Education.png'
+import Imran from '@/public/assets/Imran-ud-Din-Core-Eduaction.png'
+import Husnain from '@/public/assets/Husnain-Haider-Core-Education.png'
+import Khadeeja from '@/public/assets/Khadeeja-Batool-Core-Education.png'
 import Image from "next/image"
 
 const TeamSection = () => {
     const teamMembers = [
         {
-            name: "Sarah Malik",
-            role: "Head of Learning Design",
-            image: ProfilePic,
+            name: "Mussarat Shahid",
+            role: "Lead Trainer (Pedagogical Practices and Teaching & Learning)",
+            image: Mussarat,
         },
         {
-            name: "Ahmed Khan",
-            role: "Director of Technology",
-            image: ProfilePic,
+            name: "Amil Tamour Daud Khan",
+            role: " Project Manager and Communications Lead",
+            image: Amil,
         },
         {
-            name: "Fatima Rizvi",
-            role: "Engagement Lead",
-            image: ProfilePic,
+            name: "Saman Zahid",
+            role: "Instructional Designer",
+            image: Saman,
         },
         {
-            name: "Omar Shah",
-            role: "Education Consultant",
+            name: "Imran ud Din",
+            role: "LMS Manager",
+            image: Imran,
+        },
+        {
+            name: "Husnain Haider",
+            role: "Training Manager",
+            image: Husnain,
+        },
+        {
+            name: "Khadeeja Batool",
+            role: "Research Associate ",
+            image: Khadeeja,
+        },
+        {
+            name: "Fakhra Shahid",
+            role: "Lead Trainer (Special Focus on School Management & Leadership)",
             image: ProfilePic,
         },
     ]

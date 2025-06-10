@@ -25,7 +25,7 @@ const BenefitsHero = () => {
                         alt="Technology interface with digital elements"
                         width={1000}
                         height={1000}
-                        priority={true}
+                        priority
                         className="w-full h-full object-cover"
                     />
                 </div>
@@ -48,8 +48,10 @@ const BenefitsHero = () => {
                         src={BenefitsHero2}
                         alt='Powered by EduPro'
                         className='rounded-3xl'
+                        priority
                     />
                     <Image
+                        priority
                         src={EduProLogo}
                         alt='Powered by EduPro'
                         width={200}

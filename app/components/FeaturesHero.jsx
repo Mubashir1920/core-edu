@@ -20,7 +20,7 @@ const FeaturesHero = () => {
                         alt="Technology interface with digital elements"
                         width={1000}
                         height={1000}
-                        priority={true}
+                        priority
                         className="w-full h-full object-cover"
                     />
                     <div className="md:hidden absolute top-[70vh] right-0 flex py-5 overflow-hidden justify-end">
