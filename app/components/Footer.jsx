@@ -38,7 +38,7 @@ const Footer = () => {
                                 placeholder="Your email address"
                                 className="w-full p-4 rounded-full bg-teal-600 placeholder-white/40 text-white pr-10 outline-none"
                             />
-                            <button className="absolute cursor-pointer right-2 top-1/2 -translate-y-1/2 bg-white text-teal-700 p-2 rounded-full">
+                            <button aria-label='Subscribe Button' className="absolute cursor-pointer right-2 top-1/2 -translate-y-1/2 bg-white text-teal-700 p-2 rounded-full">
                                 <FiSend size={16} />
                             </button>
                         </div>
