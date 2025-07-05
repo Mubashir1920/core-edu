@@ -125,7 +125,7 @@ const AccordionPathways = () => {
                 <>
                     <div className="flex flex-col  max-w-full md:max-w-2xl md:items-start gap-4 py-4">
                         <Image
-                            src={Accordion3} 
+                            src={Accordion3}
                             alt="Professional Development"
                             width={600}
                             height={400}
@@ -171,7 +171,7 @@ const AccordionPathways = () => {
         <section className=" pb-20" >
             <div className="w-full">
                 <div className="container mx-auto py-10 sm:py-20 px-4">
-                    <h2 className="text-base sm:text-lg text-gray-600 uppercase tracking-tight mb-2 sm:mb-4">Key Pathways</h2>
+                    <h1 className="text-base sm:text-lg text-gray-600 uppercase tracking-tight mb-2 sm:mb-4">Key Pathways</h1>
                     <h1 className="text-4xl tracking-tighter font-bold">
                         Teacher Professional Development <span className="text-primary">Pathways</span>
                     </h1>
@@ -185,14 +185,14 @@ const AccordionPathways = () => {
                             onClick={() => toggleAccordion(index)}
                             className="w-full flex flex-col sm:flex-row relative  cursor-pointer justify-between items-start sm:items-center py-3 sm:py-5 px-0 text-left focus:outline-none gap-3 sm:gap-0"
                         >
-                            <h3
+                            <h2
                                 className={`${activeIndex === index ? "opacity-100" : "opacity-50"} text-xl sm:text-2xl font-semibold tracking-tighter`}
                             >
                                 {item.title.split(" ")[0]}{" "}
                                 <span className={`${activeIndex === index ? "text-primary opacity-100" : "text-black"}`}>
                                     {item.title.split(" ")[1]}
                                 </span>
-                            </h3>
+                            </h2>
                             <span
                                 className={`${activeIndex === index ? "text-black" : "opacity-50"} w-full sm:w-[45%] text-sm sm:text-base`}
                             >

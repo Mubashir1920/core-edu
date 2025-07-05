@@ -12,7 +12,7 @@ import Image3 from "@/public/assets/learning-pathways-3.png";
 const tabs = [
     {
         title: "Professional Development",
-        image: Image1, // Replace with actual image
+        image: Image1,
         badges: ["Micro workshops", "Certifications", "Online & Hybrid"],
         content:
             "Professional development courses to help educators upskill, earn certifications, and stack credits toward a degree — offered online and in hybrid formats.",
@@ -38,7 +38,7 @@ export default function LearningPathways() {
 
     return (
         <section className="container mx-auto px-4 py-20">
-            <h2 className="text-md text-gray-600 uppercase tracking-tight mb-1">Key Pathways</h2>
+            <h1 className="text-md text-gray-600 uppercase tracking-tight mb-1">Key Pathways</h1>
             <h1 className="text-4xl tracking-tighter font-bold mb-8">
                 Our <span className="text-primary">Learning</span> Pathways
             </h1>

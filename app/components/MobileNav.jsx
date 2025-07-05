@@ -61,7 +61,7 @@ const MobileNav = () => {
     return (
         <>
             {/* Toggle Button */}
-            <button className="text-xl cursor-pointer lg:hidden">
+            <button aria-label="Open menu" className="text-xl cursor-pointer lg:hidden">
                 <HiOutlineMenuAlt3 onClick={() => setActive(true)} className={`${active ? 'hidden' : 'block'}`} size={35} />
             </button>
 

@@ -195,9 +195,9 @@ export default function ProfessionalDevelopment() {
         <>
             <div className="w-full px-4 py-8 md:py-16 bg-white">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-4xl font-bold tracking-tighter text-center text-black">
+                    <h1 className="text-4xl font-bold tracking-tighter text-center text-black">
                         Pathway <span className="text-primary">Categories</span>
-                    </h2>
+                    </h1>
 
                     <div className="mt-8 flex flex-col md:flex-row justify-center gap-4">
                         {categories.map((category, index) => (
