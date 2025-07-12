@@ -1,8 +1,8 @@
 
 import CourseCard from "./CourseCard"
 import FAQComponent from "./CourseFaq"
+import CourseTestimonials from "./CourseTestimonials"
 import FilterCourse from "./FilterCourse"
-import TestimonialsSection from "./Testimonials"
 
 import CourseImg1 from '@/public/assets/AI-Course.png'
 import CourseImg2 from '@/public/assets/AI-Course2.png'
@@ -19,7 +19,7 @@ export default function Courses() {
             <CourseCard Img={CourseImg1} />
             <CourseCard Img={CourseImg2} />
             <FAQComponent />
-            <TestimonialsSection />
+            <CourseTestimonials />
 
         </div>
     )

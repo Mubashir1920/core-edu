@@ -6,8 +6,6 @@ export const metadata = {
 }
 
 
-
-
 const page = () => {
     return <>
         <section className="container  mx-auto px-4 py-12">

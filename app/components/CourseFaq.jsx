@@ -1,16 +1,19 @@
+"use client"
+
 import { FaQuestion } from "react-icons/fa"
+import { motion } from "motion/react"
 
 export default function FAQComponent() {
     const faqs = [
         {
             question: "Who can enroll in Core Education courses?",
             answer:
-                "Our courses are designed primarily for current and aspiring educators—teachers, school leaders, examiners, and corporate trainers. If you have a passion for teaching and at least a high-school diploma (or equivalent), you’re eligible to join..",
+                "Our courses are designed primarily for current and aspiring educators—teachers, school leaders, examiners, and corporate trainers. If you have a passion for teaching and at least a high-school diploma (or equivalent), you’re eligible to join.",
         },
         {
             question: "Are Core Education credentials internationally recognized?",
             answer:
-                "Yes. Every certificate or diploma is issued in partnership with EduPro, mapped to international qualification frameworks. That means your credential is accepted by private schools across Pakistan and by global institutions following IB, IGCSE, and other curricula..",
+                "Yes. Every certificate or diploma is issued in partnership with EduPro, mapped to international qualification frameworks. That means your credential is accepted by private schools across Pakistan and by global institutions following IB, IGCSE, and other curricula.",
         },
         {
             question: "How long does a typical course take to complete?",
@@ -25,7 +28,7 @@ export default function FAQComponent() {
         {
             question: "What is the learning format—online, on-site, or hybrid?",
             answer:
-                "You choose. All courses are available 100 % online through our LMS, with optional live workshops. Selected programs also offer hybrid or on-campus intensives for schools and enterprises that prefer face-to-face sessions.",
+                "You choose. All courses are available 100% online through our LMS, with optional live workshops. Selected programs also offer hybrid or on-campus intensives for schools and enterprises that prefer face-to-face sessions.",
         },
     ]
 
@@ -40,21 +43,28 @@ export default function FAQComponent() {
 
             {/* FAQ Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-                {faqs.slice(0, 5).map((faq, index) => (
-                    <div key={index} className="flex gap-4 sm:gap-6">
-                        {/* Question Mark Icon */}
-                        <div className="bg-primary/5 p-5 max-h-fit rounded-3xl ">
-                            <FaQuestion size={28} className=" text-primary " />
+                {faqs.map((faq, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        className="flex gap-4 sm:gap-6"
+                    >
+                        {/* Icon */}
+                        <div className="bg-primary/5 p-5 max-h-fit rounded-3xl">
+                            <FaQuestion size={28} className="text-primary" />
                         </div>
 
                         {/* Content */}
                         <div className="flex-1 min-w-0">
-                            <h3 className="text-base sm:text-lg  text-darkgray font-semibold tracking-tighter  mb-3 leading-tight">
+                            <h3 className="text-base sm:text-lg text-darkgray font-semibold tracking-tighter mb-3 leading-tight">
                                 {faq.question}
                             </h3>
                             <p className="text-sm sm:text-base text-darkgray/70 leading-5">{faq.answer}</p>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>
