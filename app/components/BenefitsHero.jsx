@@ -15,9 +15,9 @@ const BenefitsHero = () => {
                 <h1 className="text-center text-black  px-2 font-bold tracking-tighter leading-8 md:leading-12 capitalize text-[35px] md:text-[50px] " >
                     <span className=" text-primary">Benefits</span> of Core Education
                 </h1>
-                <p className=" text-black tracking-tight text-sm md:text-lg w-full md:w-[50%] mx-auto capitalize text-center mt-5 " >
+                {/* <p className=" text-black tracking-tight text-sm md:text-lg w-full md:w-[50%] mx-auto capitalize text-center mt-5 " >
                     Empowering educators, students, and institutions through scalable, flexible, and impactful learning solutions
-                </p>
+                </p> */}
                 <GetStartedBtn />
                 <div className="rounded-3xl block  overflow-hidden h-[300px] md:h-[340px]">
                     <Image
@@ -58,19 +58,19 @@ const BenefitsHero = () => {
                         className='px-4 py-2 absolute -top-5 right-2  bg-white/70 backdrop-blur-sm rounded-2xl'
                     />
                 </div>
-                <div className="md:hidden absolute top-[70vh] right-0 flex py-5 overflow-hidden justify-end">
+                {/* <div className="md:hidden absolute top-[70vh] right-0 flex py-5 overflow-hidden justify-end">
                     <a href="#" className=" bg-primary text-white font-light  text-md pr-10 pl-4 py-4 rounded-xl hover:bg-primary/90 -mr-5 transition">
                         <LuNotebookPen className="inline-block mr-3" size={22} />
                         Take a Free Assessment Test
                     </a>
-                </div>
+                </div> */}
             </div>
-            <div className="hidden md:flex min-w-fit py-5 overflow-hidden justify-end">
+            {/* <div className="hidden md:flex min-w-fit py-5 overflow-hidden justify-end">
                 <a href="#" className=" bg-primary text-white font-light  text-md pr-10 pl-4 py-4 rounded-xl hover:bg-primary/90 -mr-5 transition">
                     <LuNotebookPen className="inline-block mr-3" size={22} />
                     Take a Free Assessment Test
                 </a>
-            </div>
+            </div> */}
             <section className="w-full bg-lightgray py-16 px-4 md:px-12 xl:px-24">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
                     <motion.div

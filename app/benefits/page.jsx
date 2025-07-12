@@ -17,7 +17,7 @@ const page = () => {
             <BenefitsHero />
             <BenefitsAbout />
             <ServicesGrid />
-            <EducationalTools />
+            {/* <EducationalTools /> */}
             <TestimonialsSection />
         </>
     )

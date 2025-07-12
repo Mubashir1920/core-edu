@@ -17,22 +17,26 @@ const ContactInfo = () => {
                     <FiMail className="w-6 h-6 text-gray-800" />
                 </div>
                 <div>
-                    <p className="text-sm text-darkgray/80 uppercase font-medium">Email</p>
-                    <p className=" text-gray-800">support@coreeducation.com</p>
+                    <a href="mailto:support@coreeducation.com">
+                        <p className="text-sm text-darkgray/80 uppercase font-medium">Email</p>
+                        <p className=" text-gray-800">support@coreeducation.com</p>
+                    </a>
                 </div>
             </div>
 
             <div className="bg-lightgray rounded-2xl p-6 flex items-start gap-4">
                 <div className="bg-white rounded-full p-3">
-                    <FiPhone className="w-6 h-6 text-gray-800" />
+                    <FiMapPin className="w-6 h-6 text-gray-800" />
                 </div>
                 <div>
-                    <p className="text-sm text-darkgray/80 uppercase font-medium">Phone</p>
-                    <p className=" text-gray-800">+123 456 7890</p>
+                    <p className="text-sm text-darkgray/80 uppercase font-medium">Location</p>
+                    <p className=" text-gray-800">
+                        12, Mauve Area, G8/1, Islamabad
+                    </p>
                 </div>
             </div>
 
-            <div className="bg-lightgray rounded-2xl p-6 flex items-start gap-4 md:col-span-2">
+            {/* <div className="bg-lightgray rounded-2xl p-6 flex items-start gap-4 md:col-span-2">
                 <div className="bg-white rounded-full p-3">
                     <FiMapPin className="w-6 h-6 text-gray-800" />
                 </div>
@@ -42,7 +46,7 @@ const ContactInfo = () => {
                         Core Education Headquarters, 123 Learning Lane, Education City, ED 45678
                     </p>
                 </div>
-            </div>
+            </div> */}
         </motion.div>
     )
 }

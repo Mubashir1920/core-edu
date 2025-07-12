@@ -20,12 +20,12 @@ const page = () => {
                 </p>
             </section>
             <ContactForm />
-            <div className="hidden md:flex  min-w-fit  -mt-10 z-10 overflow-hidden justify-end">
+            {/* <div className="hidden md:flex  min-w-fit  -mt-10 z-10 overflow-hidden justify-end">
                 <a href="#" className=" bg-primary text-white font-light  text-md pr-10 pl-4 py-4 rounded-xl hover:bg-primary/90 -mr-5 transition">
                     <LuNotebookPen className="inline-block mr-3" size={22} />
                     Take a Free Assessment Test
                 </a>
-            </div>
+            </div> */}
             <ContactInfo />
 
         </>

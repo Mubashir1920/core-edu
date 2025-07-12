@@ -1,14 +1,21 @@
-'use client'
+'use client';
 import { useState, useEffect } from "react";
 import { BsArrowUp } from "react-icons/bs";
-
 
 export default function ScrollToTopButton() {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
+        let ticking = false;
+
         const toggleVisibility = () => {
-            setIsVisible(window.scrollY > 300);
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    setIsVisible(window.scrollY > 300);
+                    ticking = false;
+                });
+                ticking = true;
+            }
         };
 
         window.addEventListener("scroll", toggleVisibility);
@@ -20,14 +27,13 @@ export default function ScrollToTopButton() {
     };
 
     return (
-        isVisible && (
-            <button
-                onClick={scrollToTop}
-                className="fixed bottom-6 right-6 z-50 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary/80 transition-all"
-                aria-label="Scroll to top"
-            >
-                <BsArrowUp className="w-5 h-5" />
-            </button>
-        )
+        <button
+            onClick={scrollToTop}
+            className={`fixed bottom-6 right-6 z-50 p-3 rounded-full shadow-lg transition-all ${isVisible ? 'opacity-100 visible bg-primary cursor-pointer text-white hover:bg-primary/80' : 'opacity-0 invisible'
+                }`}
+            aria-label="Scroll to top"
+        >
+            <BsArrowUp className="w-5 h-5" />
+        </button>
     );
 }

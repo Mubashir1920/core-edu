@@ -282,12 +282,12 @@ export default function PricingComponent() {
                     </motion.div>
                 </div>
             </div >
-            <div className="absolute right-0 top-20 md:relative md:flex min-w-fit py-5 overflow-hidden justify-end">
+            {/* <div className="absolute right-0 top-20 md:relative md:flex min-w-fit py-5 overflow-hidden justify-end">
                 <a href="#" className=" bg-primary text-white font-light  text-md pr-10 pl-4 py-4 rounded-xl hover:bg-primary/90 -mr-5 transition">
                     <LuNotebookPen className="inline-block mr-3" size={22} />
                     Take a Free Assessment Test
                 </a>
-            </div>
+            </div> */}
         </div>
     )
 }

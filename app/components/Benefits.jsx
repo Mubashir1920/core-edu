@@ -78,10 +78,10 @@ export default function BenefitsSection() {
                             variants={item}
                         >
                             <div className="flex flex-col items-start">
-                                <h3 className="text-2xl  font-semibold tracking-tight mb-2">{benefit.title}</h3>
                                 <div className="bg-primary/5 p-5 rounded-3xl mb-4 group-hover:bg-white/80 transition-colors duration-700">
                                     <benefit.icon size={28} className=" text-primary " />
                                 </div>
+                                <h3 className="text-2xl  font-semibold tracking-tight mb-2">{benefit.title}</h3>
                                 <p className="text-gray-600 text-[18px] tracking-tight ">{benefit.description}</p>
                             </div>
                         </motion.div>

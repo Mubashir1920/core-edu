@@ -10,10 +10,10 @@ import HeaderLogo from '@/public/assets/Core-Logo.png';
 import MobileNav from "./MobileNav";
 
 const navLinks = [
-    { name: "Features", path: "/features" },
+    // { name: "Features", path: "/features" },
     { name: "Benefits", path: "/benefits" },
     { name: "Pathways", path: "/pathways" },
-    { name: "Pricing", path: "/pricing" },
+    // { name: "Pricing", path: "/pricing" },
     { name: "Contact", path: "/contact" },
 ];
 
@@ -30,16 +30,24 @@ export default function Navbar() {
     const toggleDropdown = () => setIsOpen(prev => !prev);
 
     return (
-        <nav className="bg-background w-full pt-10 pb-5">
+        <nav className="bg-background w-full pt-10 pb-5"  >
             <div className="container px-5  mx-auto flex justify-between items-center">
                 {/* Logo */}
                 <Link href='/' className="cursor-pointer" >
-                    <Image src={HeaderLogo} className="w-32 "  alt="Core-Education-Logo" />
+                    <Image src={HeaderLogo} className="w-32 " alt="Core-Education-Logo" />
                 </Link>
                 <div className="hidden lg:block" >
                     {/* Navigation */}
                     <ul className="flex items-center gap-3 text-sm">
                         {/* About Link */}
+                        <Link href="/courses">
+                            <li
+                                className={`py-1 px-3 rounded-2xl transition-colors duration-300 hover:bg-gray-100/50 ${path === '/courses' ? 'bg-gray-100/50' : ''
+                                    }`}
+                            >
+                                Courses
+                            </li>
+                        </Link>
                         <Link href="/about">
                             <li
                                 className={`py-1 px-3 rounded-2xl transition-colors duration-300 hover:bg-gray-100/50 ${path === '/about' ? 'bg-gray-100/50' : ''

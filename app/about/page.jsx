@@ -1,6 +1,7 @@
 import AboutHero from "../components/AboutHero"
 import BenefitsSection from "../components/Benefits"
-import EducationalCommunity from "../components/CommunityServe"
+// import EducationalCommunity from "../components/CommunityServe"
+import EducationalTools from "../components/EducationalTools"
 import ImpactSection from "../components/ImpactSection"
 import TeamSection from "../components/TeamSection"
 
@@ -15,7 +16,8 @@ const page = () => {
             <AboutHero />
             <ImpactSection />
             <BenefitsSection />
-            <EducationalCommunity />
+            <EducationalTools />
+            {/* <EducationalCommunity /> */}
             <TeamSection />
         </>
     )

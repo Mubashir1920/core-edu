@@ -12,10 +12,10 @@ import CoreLogo from '@/public/assets/core-eduation-whitelogo.png';
 import { usePathname } from "next/navigation";
 
 const navLinks = [
-    { name: "Features", path: "/features" },
+    // { name: "Features", path: "/features" },
     { name: "Benefits", path: "/benefits" },
     { name: "Pathways", path: "/pathways" },
-    { name: "Pricing", path: "/pricing" },
+    // { name: "Pricing", path: "/pricing" },
     { name: "Contact", path: "/contact" },
 ];
 
@@ -85,6 +85,13 @@ const MobileNav = () => {
                                 exit="hidden"
                                 className="flex flex-col gap-6 text-lg font-light mt-20"
                             >
+                                <motion.li variants={itemVariants}>
+                                    <Link className="relative" href="/courses" onClick={() => setActive(false)}>
+                                        Courses
+                                        <span className={`${pathname == '/courses' ? 'block' : 'hidden'} h-[4px] absolute left-0 block bottom-[1px] bg-white/70 w-full`} />
+                                    </Link>
+                                </motion.li>
+
                                 <motion.li variants={itemVariants}>
                                     <Link className="relative" href="/about" onClick={() => setActive(false)}>
                                         About

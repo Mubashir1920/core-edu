@@ -1,5 +1,10 @@
 import Link from "next/link"
 
+
+export const metadata = {
+    title: 'Page Not Found | Core Education ',
+}
+
 const notfound = () => {
     return (
         <div className="min-h-screen flex flex-col justify-center items-center" >

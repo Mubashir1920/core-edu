@@ -24,7 +24,7 @@ const slides = [
 ]
 
 // Duplicate the slides
-const duplicatedSlides = [...slides, ...slides]
+const duplicatedSlides = [...slides, ...slides, ...slides, ...slides]
 
 const HomeHeroSlider = () => {
     return (
@@ -37,7 +37,7 @@ const HomeHeroSlider = () => {
                         repeat: Infinity,
                         repeatType: "loop",
                         ease: "linear",
-                        duration: 10
+                        duration: 15
                     }}
                 >
                     {duplicatedSlides.map((slide, index) => (
@@ -48,7 +48,7 @@ const HomeHeroSlider = () => {
                 </motion.div>
             </div>
 
-            <div className="min-w-fit flex my-7 overflow-hidden justify-end">
+            {/* <div className="min-w-fit flex my-7 overflow-hidden justify-end">
                 <a
                     href="#"
                     className="bg-primary text-white font-light text-md pr-10 pl-4 py-4 rounded-xl hover:bg-primary/90 -mr-5 transition"
@@ -56,7 +56,7 @@ const HomeHeroSlider = () => {
                     <LuNotebookPen className="inline-block mr-3" size={22} />
                     Take a Free Assessment Test
                 </a>
-            </div>
+            </div> */}
         </section>
     )
 }

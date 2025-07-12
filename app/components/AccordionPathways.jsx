@@ -171,15 +171,15 @@ const AccordionPathways = () => {
         <section className=" pb-20" >
             <div className="w-full">
                 <div className="container mx-auto py-10 sm:py-20 px-4">
-                    <h1 className="text-base sm:text-lg text-gray-600 uppercase tracking-tight mb-2 sm:mb-4">Key Pathways</h1>
-                    <h1 className="text-4xl tracking-tighter font-bold">
+                    <h2 className="text-base sm:text-lg text-gray-600 uppercase tracking-tight mb-2 sm:mb-4">Key Pathways</h2>
+                    <h2 className="text-4xl tracking-tighter font-bold">
                         Teacher Professional Development <span className="text-primary">Pathways</span>
-                    </h1>
+                    </h2>
                 </div>
                 {items.map((item, index) => (
                     <div
                         key={index}
-                        className={`${activeIndex === index ? "bg-lightgray py-8 sm:py-12 md:py-20" : "bg-white py-3"} border-b border-gray-200 mx-auto   px-10 md:px-16 lg:px-28 transition-all duration-500`}
+                        className={`${activeIndex === index ? "bg-lightgray py-8 sm:py-12 " : "bg-white py-3"} border-b border-gray-200 mx-auto   px-10 md:px-16 lg:px-28 transition-all duration-500`}
                     >
                         <button
                             onClick={() => toggleAccordion(index)}

@@ -65,36 +65,37 @@ const ServiceCard = ({ title, description, imageSrc, index }) => {
 export default function ServicesGrid() {
     const services = [
         {
-            title: "Flexible Lending",
-            description: "Learn anytime, anywhere.Access courses online or in hybrid formats, designed to fit around busy teaching schedules",
+            title: "Flexible Learning",
+            description: "Our flexible learning options let you study anytime, anywhere—at your own pace.",
             imageSrc: BenefitsImage1,
         },
         {
             title: "Recognized Credentials",
-            description: "Earn qualifications that matter.Our programs lead to certifications and degrees that are valued by schools and institutions",
+            description: "Earn industry-recognized credentials that validate your skills and boost your career.",
             imageSrc: BenefitsImage2,
         },
         {
             title: "Customized Training",
-            description: "Tailored for your institution.Programs are designed to meet specific school needs, with onsite delivery and post-training support",
+            description: "Get training tailored to your team's unique goals, challenges, and industry needs.",
             imageSrc: BenefitsImage3,
         },
         {
-            title: "Real-World Skills",
-            description: "Practical, classroom-ready learning.Courses focus on real teaching challenges—like classroom management, tech integration, and student engagement.",
+            title: "Real-world Skills",
+            description: "Build practical, real-world skills you can apply immediately in your job or business.",
             imageSrc: BenefitsImage4,
         },
         {
-            title: "Expert-Led Courses",
-            description: "Learn from experienced educators.Sessions are developed and led by teaching professionals and subject matter experts.",
+            title: "Expert-led Courses",
+            description: "Learn from industry experts through engaging, expert-led courses designed for real impact.",
             imageSrc: BenefitsImage5,
         },
         {
             title: "Stackable Pathways",
-            description: "Build toward a degree.Short courses can be converted into academic credit—progress at your own pace, one course at a time.",
+            description: "Progress your learning with stackable pathways that lead to advanced credentials and career growth.",
             imageSrc: BenefitsImage6,
         },
-    ]
+    ];
+
 
     return (
         <section className="bg-lightgray py-20">

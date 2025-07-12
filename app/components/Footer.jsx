@@ -9,7 +9,8 @@ import CoreLogo from '@/public/assets/core-eduation-whitelogo.png'
 import Link from 'next/link';
 
 const navLinks = [
-    { name: "Features", path: "/features" },
+    { name: "Courses", path: "/courses" },
+    { name: "About", path: "/about" },
     { name: "Benefits", path: "/benefits" },
     { name: "Pathways", path: "/pathways" },
     { name: "Pricing", path: "/pricing" },
@@ -17,6 +18,9 @@ const navLinks = [
 ];
 
 const Footer = () => {
+
+    const currentYear = new Date().getFullYear()
+
     return (
         <footer className="bg-primary text-white px-6 md:px-20 pt-20 pb-10">
             <div className="flex flex-col md:flex-row md:justify-between gap-10 md:items-start">
@@ -84,26 +88,27 @@ const Footer = () => {
             {/* Bottom Line */}
             <div className="border-t flex justify-between items-center border-white/20 mt-10 pt-2 ">
                 <p className='text-md text-white/50 text-center md:text-left' >
-                    © Core Education, 2025
+                    Copyright © Core Education {currentYear} - All Rights Reserved
                 </p>
                 {/* Social Icons */}
-                <div className="md:flex gap-3 mt-4 hidden ">
-                    <div className="p-2 bg-white/10 rounded-full hover:bg-white/20 cursor-pointer">
+                <div className="md:flex gap-3 mt-4 hidden">
+                    <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 cursor-pointer">
                         <RxCross2 size={22} />
-                    </div>
-                    <div className="p-2 bg-white/10 rounded-full hover:bg-white/20 cursor-pointer">
+                    </a>
+                    <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 cursor-pointer">
                         <FaFacebookF size={22} />
-                    </div>
-                    <div className="p-2 bg-white/10 rounded-full hover:bg-white/20 cursor-pointer">
+                    </a>
+                    <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 cursor-pointer">
                         <FaInstagram size={22} />
-                    </div>
-                    <div className="p-2 bg-white/10 rounded-full hover:bg-white/20 cursor-pointer">
+                    </a>
+                    <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 cursor-pointer">
                         <FaLinkedinIn size={22} />
-                    </div>
-                    <div className="p-2 bg-white/10 rounded-full hover:bg-white/20 cursor-pointer">
+                    </a>
+                    <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 cursor-pointer">
                         <FaYoutube size={22} />
-                    </div>
+                    </a>
                 </div>
+
             </div>
         </footer>
     );

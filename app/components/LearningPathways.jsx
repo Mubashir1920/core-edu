@@ -43,9 +43,9 @@ export default function LearningPathways() {
                 Our <span className="text-primary">Learning</span> Pathways
             </h1>
 
-            <div className="flex flex-col md:flex-row gap-6">
+            <div className="flex flex-col md:flex-row gap-10 ">
                 {/* Sidebar Tabs */}
-                <div className="flex flex-col gap-4 md:w-1/2 md:pr-10">
+                <div className="flex flex-col gap-4 md:w-1/2 ">
                     {tabs.map((tab, index) => (
                         <button
                             key={tab.title}

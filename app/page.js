@@ -1,5 +1,6 @@
 import AccordionPathways from "./components/AccordionPathways";
-import BenefitsSection from "./components/Benefits";
+import CoursesHub from "./components/CourseHub";
+// import BenefitsSection from "./components/Benefits";
 import HomeAbout from "./components/HomeAbout";
 import HomeHero from "./components/HomeHero";
 import LearningApproach from "./components/LearningApproach";
@@ -12,10 +13,11 @@ export default function Home() {
     <>
       <HomeHero />
       <HomeAbout />
+      <CoursesHub />
       <LearningPathways />
       <WorkSteps />
       <AccordionPathways />
-      <BenefitsSection />
+      {/* <BenefitsSection /> */}
       <LearningApproach />
       <TestimonialsSection />
     </>
