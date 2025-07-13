@@ -123,7 +123,7 @@ export default function CoursesHub() {
     const currentContent = tabContent[activeTab]
 
     return (
-        <div>
+        <div className="overflow-hidden" >
             <div className="container mx-auto px-4 mb-8">
                 {/* Header */}
                 <motion.div
@@ -163,7 +163,7 @@ export default function CoursesHub() {
             </div>
 
             {/* Main Content */}
-            <div className="bg-lightgray py-6">
+            <div className="bg-lightgray overflow-hidden py-6">
                 <div className="container mx-auto px-4">
                     <motion.div
                         ref={contentRef}
