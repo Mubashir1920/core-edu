@@ -5,6 +5,7 @@ import { motion, useInView } from "motion/react"
 import { FaCheck, FaStar } from "react-icons/fa"
 import Image from "next/image"
 import { BsChevronRight } from "react-icons/bs"
+import Link from "next/link"
 
 const tabs = [
     { id: "professional", label: "Professional Development", active: true },
@@ -13,12 +14,92 @@ const tabs = [
     { id: "leadership", label: "Educational Leadership", active: false },
 ]
 
-const features = [
-    "Engaging lesson delivery & active learning tactics",
-    "Differentiation for mixed-ability classrooms",
-    "Parent & peer communication techniques",
-    "Data-driven formative assessment",
-]
+const tabContent = {
+    professional: {
+        levelUp: "Level-up your daily practice.",
+        title: "Professional Development",
+        description:
+            "Sharpen core teaching skills—from classroom management to digital literacy—in short, stackable modules you can finish between grading sessions.",
+        features: [
+            "Engaging lesson delivery & active learning tactics",
+            "Differentiation for mixed-ability classrooms",
+            "Parent & peer communication techniques",
+            "Data-driven formative assessment",
+        ],
+        testimonial: {
+            text: "Core Eds courses transformed how I run my lessons—students are more engaged, and I feel confident using tech every day.",
+            author: "Ayesha Khan, Biology Teacher, Lahore Grammar School",
+        },
+        spotlightCourse: {
+            title: "AI-Enhanced Classroom Strategies",
+            image: "/assets/Core-Education-Online-Course.png",
+            tags: ["Personalization", "Automation", "Design", "Ethical Use"],
+        },
+    },
+    ai: {
+        levelUp: "Embrace the future of education.",
+        title: "AI in Education",
+        description:
+            "Discover how artificial intelligence can enhance your teaching methods, streamline administrative tasks, and create personalized learning experiences for every student.",
+        features: [
+            "AI-powered lesson planning and content creation",
+            "Automated grading and feedback systems",
+            "Personalized learning pathways for students",
+            "Ethical AI implementation in classrooms",
+        ],
+        testimonial: {
+            text: "The AI courses helped me integrate technology seamlessly into my curriculum. My students are more motivated and I save hours on planning.",
+            author: "Dr. Sarah , Computer Science Professor, Lahore Grammar School",
+        },
+        spotlightCourse: {
+            title: "Machine Learning for Educators",
+            image: "/assets/Core-Education-Online-Course.png",
+            tags: ["Machine Learning", "Data Analysis", "Student Insights", "Predictive Analytics"],
+        },
+    },
+    instructional: {
+        levelUp: "Design learning that sticks.",
+        title: "Instructional Design",
+        description:
+            "Master the art and science of creating effective learning experiences through evidence-based design principles, multimedia integration, and learner-centered approaches.",
+        features: [
+            "Learning objectives and curriculum mapping",
+            "Multimedia and interactive content design",
+            "Assessment design and rubric development",
+            "Universal Design for Learning (UDL) principles",
+        ],
+        testimonial: {
+            text: "These instructional design courses revolutionized how I create content. My courses are now more engaging and effective than ever before.",
+            author: "Saba Naeen , Curriculum Designer, Lahore Grammar School",
+        },
+        spotlightCourse: {
+            title: "Interactive Learning Experiences",
+            image: "/assets/Core-Education-Online-Course.png",
+            tags: ["UX Design", "Gamification", "Accessibility", "Engagement"],
+        },
+    },
+    leadership: {
+        levelUp: "Lead educational transformation.",
+        title: "Educational Leadership",
+        description:
+            "Develop the skills to lead educational institutions through change, foster innovation, and create environments where both educators and students thrive.",
+        features: [
+            "Strategic planning and vision development",
+            "Team building and professional development",
+            "Change management in educational settings",
+            "Data-driven decision making for leaders",
+        ],
+        testimonial: {
+            text: "The leadership program gave me the tools to transform our school culture. We've seen remarkable improvements in both teacher satisfaction and student outcomes.",
+            author: "Fatima ,Computer Science Teacher, Alpha High School",
+        },
+        spotlightCourse: {
+            title: "Digital Transformation Leadership",
+            image: "/assets/Core-Education-Online-Course.png",
+            tags: ["Digital Strategy", "Innovation", "Culture Change", "Technology Integration"],
+        },
+    },
+}
 
 export default function CoursesHub() {
     const [activeTab, setActiveTab] = useState("professional")
@@ -38,6 +119,8 @@ export default function CoursesHub() {
     const featuresInView = useInView(featuresRef, { once: true, margin: "-100px" })
     const testimonialInView = useInView(testimonialRef, { once: true, margin: "-100px" })
     const spotlightInView = useInView(spotlightRef, { once: true, margin: "-100px" })
+
+    const currentContent = tabContent[activeTab]
 
     return (
         <div>
@@ -70,9 +153,7 @@ export default function CoursesHub() {
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             onClick={() => setActiveTab(tab.id)}
-                            className={`px-6 w-full py-3 rounded-[20px] text-md font-medium transition-all duration-300 ${tab.id === activeTab
-                                ? "bg-primary text-white"
-                                : "bg-lightgray text-darkgray/70"
+                            className={`px-6 w-full py-3 rounded-[20px] text-md font-medium transition-all duration-300 ${tab.id === activeTab ? "bg-primary text-white" : "bg-lightgray text-darkgray/70"
                                 }`}
                         >
                             {tab.label}
@@ -89,25 +170,21 @@ export default function CoursesHub() {
                         initial={{ opacity: 0, x: -30 }}
                         animate={contentInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
+                        key={activeTab} // Add key to trigger re-animation on tab change
                     >
                         <div className="mb-6">
-                            <p className="text-primary font-medium mb-2">Level-up your daily practice.</p>
-                            <h2 className="text-2xl md:text-3xl tracking-tighter font-bold mb-4">Professional Development</h2>
-                            <p className="text-black">
-                                Sharpen core teaching skills—from classroom management to digital literacy—in short, stackable modules
-                                you can finish between grading sessions.
-                            </p>
+                            <p className="text-primary font-medium mb-2">{currentContent.levelUp}</p>
+                            <h2 className="text-2xl md:text-3xl tracking-tighter font-bold mb-4">{currentContent.title}</h2>
+                            <p className="text-black">{currentContent.description}</p>
                         </div>
-
                         <hr className="container mx-auto py-3 text-primary/50" />
-
-                        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-7 gap-x-0 gap-y-5 lg:gap-y-0  ">
+                        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-7 gap-x-0 gap-y-5 lg:gap-y-0">
                             {/* Left Side */}
                             <div className="col-span-2">
                                 <div className="mb-8" ref={featuresRef}>
                                     <h3 className="text-lg tracking-tight font-bold text-black mb-4">You'll master:</h3>
                                     <div className="space-y-3">
-                                        {features.map((feature, index) => (
+                                        {currentContent.features.map((feature, index) => (
                                             <motion.div
                                                 key={index}
                                                 initial={{ opacity: 0, x: -20 }}
@@ -132,13 +209,12 @@ export default function CoursesHub() {
                                     transition={{ duration: 0.6, delay: 0.2 }}
                                     className="bg-white p-6 rounded-[20px]"
                                 >
-                                    <p className="tracking-tight mb-4">
-                                        "Core Eds courses transformed how I run my lessons—students are more engaged, and I feel confident using
-                                        tech every day."
-                                    </p>
+                                    <p className="tracking-tight mb-4">"{currentContent.testimonial.text}"</p>
                                     <div className="flex items-center justify-between">
                                         <div>
-                                            <p className="font-bold tracking-tight text-lg text-gray-900">Ayesha Khan, Biology Teacher, Lahore Grammar School</p>
+                                            <p className="font-bold tracking-tight text-lg text-gray-900">
+                                                {currentContent.testimonial.author}
+                                            </p>
                                         </div>
                                         <div className="flex gap-1">
                                             {[...Array(5)].map((_, i) => (
@@ -150,7 +226,7 @@ export default function CoursesHub() {
                             </div>
 
                             {/* Right Side */}
-                            <div className="col-span-1 ">
+                            <div className="col-span-1">
                                 <motion.div
                                     ref={spotlightRef}
                                     initial={{ opacity: 0, x: 30 }}
@@ -160,38 +236,35 @@ export default function CoursesHub() {
                                     <div className="mb-4">
                                         <h3 className="text-lg tracking-tight font-bold text-black mb-4">Spotlight Course</h3>
                                     </div>
-
-                                    <div className="overflow-hidden p-4  rounded-[20px] bg-primary">
+                                    <div className="overflow-hidden p-4 rounded-[20px] bg-primary">
                                         <div className="relative">
                                             <Image
-                                                src="/assets/Core-Education-Online-Course.png"
+                                                src={currentContent.spotlightCourse.image || "/placeholder.svg"}
                                                 width={200}
                                                 height={250}
-                                                alt="AI-Enhanced Classroom Strategies"
+                                                alt={currentContent.spotlightCourse.title}
                                                 className="w-full h-48 rounded-[20px] object-cover"
                                             />
                                         </div>
-
-                                        <h4 className="text-white font-semibold py-2 tracking-tight text-lg">AI-Enhanced Classroom Strategies</h4>
+                                        <h4 className="text-white font-semibold py-2 tracking-tight text-lg">
+                                            {currentContent.spotlightCourse.title}
+                                        </h4>
                                         <div className="flex flex-wrap gap-2 mb-4">
-                                            <span className="px-3 py-1 bg-white text-primary text-sm font-medium lg:font-normal rounded-full">
-                                                Personalization
-                                            </span>
-                                            <span className="px-3 py-1 bg-white text-primary text-sm font-medium lg:font-normal rounded-full">
-                                                Automation
-                                            </span>
-                                            <span className="px-3 py-1 bg-white text-primary text-sm font-medium lg:font-normal rounded-full">Design</span>
-                                            <span className="px-3 py-1 bg-white text-primary text-sm font-medium lg:font-normal rounded-full">
-                                                Ethical Use
-                                            </span>
+                                            {currentContent.spotlightCourse.tags.map((tag, index) => (
+                                                <span
+                                                    key={index}
+                                                    className="px-3 py-1 bg-white text-primary text-sm font-medium lg:font-normal rounded-full"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
                                         </div>
                                     </div>
                                 </motion.div>
-
                                 <button className="w-full text-primary mt-2 text-sm text-right">
-                                    <a href="#">
+                                    <Link href='/courses' >
                                         See All Courses <BsChevronRight className="inline-block" />
-                                    </a>
+                                    </Link>
                                 </button>
                             </div>
                         </div>
