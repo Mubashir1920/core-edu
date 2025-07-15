@@ -9,10 +9,10 @@ import HomeHeroSlider from "./HomeHeroSlider";
 const HomeHero = () => {
     return (
         <>
-            <section className="container mx-auto py-10  md:py-20 " >
-                <h1 className="text-center text-black  px-2 font-bold md:tracking-[-3px] tracking-[-0.06em] leading-10 capitalize text-[28px] md:text-[50px] " >
+            <section className="container mx-auto py-10 px-2  md:py-20 " >
+                <h1 className="text-center text-black  font-bold md:tracking-[-3px] tracking-[-0.06em] leading-10 capitalize text-[28px] xs:text-[32px] md:text-[50px] " >
                     Empower your learning
-                    <Image priority={true} src={HeroSecPlus} className="inline-block w-[80px] md:w-32 ml-2" alt="Core-education-empower" /><br />
+                    <Image priority={true} src={HeroSecPlus} className="inline-block w-[80px] md:w-32 ml-2" alt="Core-education-empower" /><br  className="hidden xs:block" />
                     Journey with <span className=" text-primary " > Core Education</span>
                 </h1>
                 <p className=" text-black text-sm md:text-md w-full lg:w-[70%] md:w-[60%] mx-auto capitalize text-center mt-5 " >
