@@ -86,7 +86,7 @@ const MobileNav = () => {
                                 initial="hidden"
                                 animate="show"
                                 exit="hidden"
-                                className="space-y-6 border text-lg font-light mt-20"
+                                className="space-y-6 text-lg font-light mt-20"
                             >
                                 <motion.li  variants={itemVariants}>
                                     <Link className="block relative" href="/courses" onClick={() => setActive(false)}>
