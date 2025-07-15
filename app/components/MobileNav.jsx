@@ -69,13 +69,16 @@ const MobileNav = () => {
             <div
                 className={`fixed top-0 right-0 h-[100dvh] bg-primary text-white text-3xl transition-transform duration-500 ease-in-out w-full px-10 z-20 ${active ? 'translate-x-0' : 'translate-x-full'}`}
             >
+                {/* Close Side Nav */}
                 <GoArrowRight onClick={() => setActive(false)} className={`text-white z-10 cursor-pointer absolute right-10 top-10`} size={35} />
 
+                {/* Core Edu Logo */}
                 <div className='relative h-full flex flex-col pt-10'>
                     <Link href="/" onClick={() => setActive(false)} className="max-w-fit cursor-pointer">
                         <Image src={CoreLogo} alt="Core Logo" width={120} height={120} />
                     </Link>
 
+                    {/* Menu items Before Resources */}
                     <AnimatePresence>
                         {active && (
                             <motion.ul
@@ -83,17 +86,17 @@ const MobileNav = () => {
                                 initial="hidden"
                                 animate="show"
                                 exit="hidden"
-                                className="flex flex-col gap-6 text-lg font-light mt-20"
+                                className="space-y-6 border text-lg font-light mt-20"
                             >
-                                <motion.li variants={itemVariants}>
-                                    <Link className="relative" href="/courses" onClick={() => setActive(false)}>
+                                <motion.li  variants={itemVariants}>
+                                    <Link className="block relative" href="/courses" onClick={() => setActive(false)}>
                                         Courses
                                         <span className={`${pathname == '/courses' ? 'block' : 'hidden'} h-[4px] absolute left-0 block bottom-[1px] bg-white/70 w-full`} />
                                     </Link>
                                 </motion.li>
 
                                 <motion.li variants={itemVariants}>
-                                    <Link className="relative" href="/about" onClick={() => setActive(false)}>
+                                    <Link className="relative block" href="/about" onClick={() => setActive(false)}>
                                         About
                                         <span className={`${pathname == '/about' ? 'block' : 'hidden'} h-[4px] absolute left-0 block bottom-[1px] bg-white/70 w-full`} />
                                     </Link>
@@ -101,8 +104,8 @@ const MobileNav = () => {
 
                                 {/* Dropdown */}
                                 <motion.li variants={itemVariants}>
-                                    <button onClick={toggleDropdown} className="flex items-center cursor-pointer gap-1">
-                                        Resources <GoChevronDown className={`${isOpen ? 'rotate-180' : ''} transition-transform duration-500 `} />
+                                    <button onClick={toggleDropdown} className="block w-full text-left cursor-pointer ">
+                                        Resources <GoChevronDown className={`${isOpen ? 'rotate-180' : ''} transition-transform duration-300 inline-block `} />
                                     </button>
                                     <AnimatePresence>
                                         {isOpen && (
@@ -126,10 +129,10 @@ const MobileNav = () => {
                                     </AnimatePresence>
                                 </motion.li>
 
-
+                                {/* Menu Items After Resources */}
                                 {navLinks.map((item) => (
                                     <motion.li key={item.name} variants={itemVariants}>
-                                        <Link href={item.path} className="relative" onClick={() => setActive(false)}>
+                                        <Link href={item.path} className=" block relative" onClick={() => setActive(false)}>
                                             {item.name}
                                             <span className={`${pathname == item.path ? 'block' : 'hidden'} h-[4px] absolute left-0 block bottom-[1px] bg-white/70 w-full`} />
                                         </Link>
