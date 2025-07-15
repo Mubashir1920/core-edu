@@ -15,7 +15,7 @@ const HomeHero = () => {
                     <Image priority={true} src={HeroSecPlus} className="inline-block w-[80px] md:w-32 ml-2" alt="Core-education-empower" /><br  className="hidden xs:block" />
                     Journey with <span className=" text-primary " > Core Education</span>
                 </h1>
-                <p className=" text-black text-sm md:text-md w-full lg:w-[70%] md:w-[60%] mx-auto capitalize text-center mt-5 " >
+                <p className=" text-black text-lg w-full md:w-[60%] mx-auto capitalize text-center mt-5 " >
                     At Core Education, we believe in transforming education through innovative  solutions tailored to your needs.
                 </p>
                 <GetStartedBtn />
