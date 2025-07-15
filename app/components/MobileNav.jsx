@@ -88,17 +88,21 @@ const MobileNav = () => {
                                 exit="hidden"
                                 className="space-y-6 text-lg font-light mt-20"
                             >
-                                <motion.li  variants={itemVariants}>
+                                <motion.li variants={itemVariants}>
                                     <Link className="block relative" href="/courses" onClick={() => setActive(false)}>
-                                        Courses
-                                        <span className={`${pathname == '/courses' ? 'block' : 'hidden'} h-[4px] absolute left-0 block bottom-[1px] bg-white/70 w-full`} />
+                                        <div className="max-w-fit relative" >
+                                            Courses
+                                            <span className={`${pathname == '/courses' ? 'block' : 'hidden'} h-[4px] absolute left-0 block bottom-[1px] bg-white/70 w-full `} />
+                                        </div>
                                     </Link>
                                 </motion.li>
 
                                 <motion.li variants={itemVariants}>
                                     <Link className="relative block" href="/about" onClick={() => setActive(false)}>
-                                        About
-                                        <span className={`${pathname == '/about' ? 'block' : 'hidden'} h-[4px] absolute left-0 block bottom-[1px] bg-white/70 w-full`} />
+                                        <div className="max-w-fit relative" >
+                                            About
+                                            <span className={`${pathname == '/about' ? 'block' : 'hidden'} h-[4px] absolute left-0 block bottom-[1px] bg-white/70 w-full `} />
+                                        </div>
                                     </Link>
                                 </motion.li>
 
@@ -133,8 +137,10 @@ const MobileNav = () => {
                                 {navLinks.map((item) => (
                                     <motion.li key={item.name} variants={itemVariants}>
                                         <Link href={item.path} className=" block relative" onClick={() => setActive(false)}>
-                                            {item.name}
-                                            <span className={`${pathname == item.path ? 'block' : 'hidden'} h-[4px] absolute left-0 block bottom-[1px] bg-white/70 w-full`} />
+                                            <div className="max-w-fit relative" >
+                                                {item.name}
+                                                <span className={`${pathname == item.path ? 'block' : 'hidden'} h-[4px] absolute left-0 block bottom-[1px] bg-white/70 w-full `} />
+                                            </div>
                                         </Link>
                                     </motion.li>
                                 ))}

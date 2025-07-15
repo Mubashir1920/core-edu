@@ -19,7 +19,7 @@ const stats = [
 
 export default function ImpactSection() {
     return (
-        <section className="bg-lightgray  w-full py-20 px-4 md:px-10">
+        <section className="bg-lightgray  w-full md:py-20 py-10 px-4 md:px-10">
             <div className="container mx-auto flex flex-col gap-12">
                 {/* Header Section */}
                 <div className="flex justify-between items-start flex-col md:flex-row">
