@@ -30,7 +30,7 @@ const BenefitsHero = () => {
                     />
                 </div>
             </section>
-            <div className='flex flex-col border container px-4 gap-10 py-12 mx-auto md:flex-row justify-between items-start tracking-tighter' >
+            <div className='flex flex-col container px-4 gap-10 py-2 md:py-12 mx-auto md:flex-row justify-between items-center tracking-tighter' >
                 <div className='md:w-1/2 w-full  space-y-3' >
                     <p className='text-darkgray/70 uppercase ' >Powered by EduPro</p>
                     <h1 className='text-4xl font-bold' >
@@ -71,8 +71,8 @@ const BenefitsHero = () => {
                     Take a Free Assessment Test
                 </a>
             </div> */}
-            <section className="w-full bg-lightgray border py-16">
-                <div className='container border px-4 mx-auto' >
+            <section className="w-full bg-lightgray py-6 md:py-16">
+                <div className='container px-4 mx-auto' >
 
                     <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
                         <motion.div
