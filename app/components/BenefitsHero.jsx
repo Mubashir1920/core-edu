@@ -30,7 +30,7 @@ const BenefitsHero = () => {
                     />
                 </div>
             </section>
-            <div className='flex flex-col max-w-6xl  pt-10 md:pt-20 px-4 gap-10 pb-10 md:pb-0 mx-auto md:flex-row justify-between items-start tracking-tighter' >
+            <div className='flex flex-col container  px-4 gap-10 py-12 mx-auto md:flex-row justify-between items-start tracking-tighter' >
                 <div className='md:w-1/2 w-full  space-y-3' >
                     <p className='text-darkgray/70 uppercase ' >Powered by EduPro</p>
                     <h1 className='text-4xl font-bold' >
@@ -71,41 +71,44 @@ const BenefitsHero = () => {
                     Take a Free Assessment Test
                 </a>
             </div> */}
-            <section className="w-full bg-lightgray py-16 px-4 md:px-12 xl:px-24">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="text-center md:text-left"
-                    >
-                        <h2 className="text-[40px] leading-10 font-bold tracking-tighter text-black">
-                            Our <span className="text-primary font-semibold">approach</span> is designed <br className="hidden sm:block" />
-                            with flexibility at its core.
-                        </h2>
-                    </motion.div>
+            <section className="w-full bg-lightgray  py-16 px-4 ">
+                <div className='container mx-auto' >
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-black tracking-tight  leading-6 text-lg space-y-5"
-                    >
-                        <p>
-                            With fully stackable pathways, learners can begin with short
-                            certificate programs and build up to diplomas or full degrees—all
-                            at their own pace. Courses are delivered by expert educators and are
-                            tailored to real-world teaching needs, blending theory with
-                            practical tools you can apply in the classroom from day one.
-                        </p>
-                        <p>
-                            From upskilling and specialization to full academic advancement,
-                            Core Ed helps educators move forward in their careers with
-                            confidence, credibility, and the freedom to shape their learning
-                            journey. Whether you’re looking to grow locally or go global, Core
-                            Ed is your foundation.
-                        </p>
-                    </motion.div>
+                    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className="text-center md:text-left"
+                        >
+                            <h2 className="text-[40px] text-left leading-10 font-bold tracking-tighter text-black">
+                                Our <span className="text-primary font-semibold">approach</span> is designed <br className="hidden sm:block" />
+                                with flexibility at its core.
+                            </h2>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            className="text-black tracking-tight  leading-6 text-lg space-y-5"
+                        >
+                            <p>
+                                With fully stackable pathways, learners can begin with short
+                                certificate programs and build up to diplomas or full degrees—all
+                                at their own pace. Courses are delivered by expert educators and are
+                                tailored to real-world teaching needs, blending theory with
+                                practical tools you can apply in the classroom from day one.
+                            </p>
+                            <p>
+                                From upskilling and specialization to full academic advancement,
+                                Core Ed helps educators move forward in their careers with
+                                confidence, credibility, and the freedom to shape their learning
+                                journey. Whether you’re looking to grow locally or go global, Core
+                                Ed is your foundation.
+                            </p>
+                        </motion.div>
+                    </div>
                 </div>
             </section>
 

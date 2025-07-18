@@ -33,7 +33,7 @@ export const metadata = {
     follow: true,
     googleBot: {
       index: true,
-      follow: true, 
+      follow: true,
       noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
@@ -50,7 +50,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body className={` ${inter.className} antialiased`}>
         <SmoothScrolling>
           <Navbar />

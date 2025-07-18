@@ -170,7 +170,7 @@ const AccordionPathways = () => {
     return (
         <section className=" pb-20" >
             <div className="w-full">
-                <div className="container mx-auto py-10 sm:py-20 px-4">
+                <div className="container mx-auto  py-10 sm:py-20 px-4">
                     <h2 className="text-base sm:text-lg text-gray-600 uppercase tracking-tight mb-2 sm:mb-4">Key Pathways</h2>
                     <h2 className="text-4xl tracking-tighter font-bold">
                         Teacher Professional Development <span className="text-primary">Pathways</span>
@@ -179,14 +179,14 @@ const AccordionPathways = () => {
                 {items.map((item, index) => (
                     <div
                         key={index}
-                        className={`${activeIndex === index ? "bg-lightgray py-8 sm:py-12 " : "bg-white py-3"} border-b border-gray-200 mx-auto   px-10 md:px-16 lg:px-28 transition-all duration-500`}
+                        className={`${activeIndex === index ? "bg-lightgray py-8 sm:py-12 " : "bg-white py-3"} border-b border-gray-200 mx-auto   px-10 md:px-16 lg:px-20 transition-all duration-500`}
                     >
                         <button
                             onClick={() => toggleAccordion(index)}
                             className="w-full flex flex-col sm:flex-row relative  cursor-pointer justify-between items-start sm:items-center py-3 sm:py-5 px-0 text-left focus:outline-none gap-3 sm:gap-0"
                         >
                             <h2
-                                className={`${activeIndex === index ? "opacity-100" : "opacity-50"} text-xl sm:text-2xl font-semibold tracking-tighter`}
+                                className={`${activeIndex === index ? "opacity-100" : "opacity-50"} text-xl md:text-2xl font-semibold tracking-tighter`}
                             >
                                 {item.title.split(" ")[0]}{" "}
                                 <span className={`${activeIndex === index ? "text-primary opacity-100" : "text-black"}`}>
