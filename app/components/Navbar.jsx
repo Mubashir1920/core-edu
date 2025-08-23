@@ -40,20 +40,20 @@ export default function Navbar() {
                     {/* Navigation */}
                     <ul className="flex items-center gap-3 text-sm">
                         {/* About Link */}
-                        <Link href="/courses">
-                            <li
-                                className={`py-1 px-3 rounded-2xl transition-colors duration-300 hover:bg-gray-100/50 ${path === '/courses' ? 'bg-gray-100/50' : ''
-                                    }`}
-                            >
-                                Courses
-                            </li>
-                        </Link>
                         <Link href="/about">
                             <li
                                 className={`py-1 px-3 rounded-2xl transition-colors duration-300 hover:bg-gray-100/50 ${path === '/about' ? 'bg-gray-100/50' : ''
                                     }`}
                             >
                                 About
+                            </li>
+                        </Link>
+                        <Link href="/courses">
+                            <li
+                                className={`py-1 px-3 rounded-2xl transition-colors duration-300 hover:bg-gray-100/50 ${path === '/courses' ? 'bg-gray-100/50' : ''
+                                    }`}
+                            >
+                                Courses
                             </li>
                         </Link>
 

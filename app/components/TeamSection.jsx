@@ -3,12 +3,12 @@ import { useRef, useEffect } from "react"
 import { motion, useInView, useAnimation } from "framer-motion"
 
 import ProfilePic from '@/public/assets/profilepic.png'
-import Mussarat from '@/public/assets/Mussarat-Shahid-Core-Education.png'
-import Amil from '@/public/assets/Amil-Tamour-Daud-Khan-Core-Education.png'
-import Saman from '@/public/assets/Saman-Zahid-Core-Education.png'
-import Imran from '@/public/assets/Imran-ud-Din-Core-Eduaction.png'
-import Husnain from '@/public/assets/Husnain-Haider-Core-Education.png'
-import Khadeeja from '@/public/assets/Khadeeja-Batool-Core-Education.png'
+import Mussarat from '@/public/assets/team-picture-1.png'
+import Amil from '@/public/assets/team-picture-3.png'
+import Saman from '@/public/assets/team-picture-4.png'
+import Imran from '@/public/assets/team-picture-5.png'
+import Husnain from '@/public/assets/team-picture-6.png'
+import Khadeeja from '@/public/assets/team-picture-2.png'
 import Image from "next/image"
 
 const TeamSection = () => {
