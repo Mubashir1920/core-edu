@@ -4,8 +4,8 @@ import Image from 'next/image'
 import { LuNotebookPen } from 'react-icons/lu'
 import GetStartedBtn from './GetStartedBtn'
 
-import BenefitsHeroImg from '@/public/assets/benefitsherobg.png'
-import BenefitsHero2 from '@/public/assets/benefitshero2.png'
+import BenefitsHeroImg from '@/public/assets/core-edu-11.png'
+import BenefitsHero2 from '@/public/assets/core-edu-12.png'
 import EduProLogo from '@/public/assets/edupro-logo-1.png'
 
 const BenefitsHero = () => {

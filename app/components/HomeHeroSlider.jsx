@@ -1,8 +1,8 @@
 "use client"
 
-import Image1 from "@/public/assets/core-education-1.png";
-import Image2 from "@/public/assets/core-education-2.png";
-import Image3 from "@/public/assets/core-education-3.png";
+import Image1 from "@/public/assets/core-edu-1.png";
+import Image2 from "@/public/assets/01.webp";
+import Image3 from "@/public/assets/core-edu-0.png";
 import EduProLogo from "@/public/assets/edupro-logo.png";
 import TeachingLogo from "@/public/assets/teaching.png";
 import Image from "next/image";

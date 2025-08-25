@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import {  LuNotebookPen } from 'react-icons/lu'
-import PathwaysHeroImg from '@/public/assets/pathways-hero-1.png'
+import PathwaysHeroImg from '@/public/assets/core-edu-7.png'
 import GetStartedBtn from './GetStartedBtn'
 
 const PathwaysHero = () => {

@@ -3,9 +3,9 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { FiArrowUpRight } from "react-icons/fi"
 
-import Accordion1 from '@/public/assets/accordion-1.png';
-import Accordion2 from '@/public/assets/accordion-2.png';
-import Accordion3 from '@/public/assets/accordion-3.png';
+import Accordion1 from '@/public/assets/11.webp';
+import Accordion2 from '@/public/assets/111.webp';
+import Accordion3 from '@/public/assets/117.webp';
 import Image from "next/image"
 
 const AccordionPathways = () => {

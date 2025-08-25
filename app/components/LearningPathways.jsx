@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from "motion/react";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import Image from "next/image";
 
-import Image1 from "@/public/assets/learning-pathways-1.png";
-import Image2 from "@/public/assets/learning-pathways-2.png";
-import Image3 from "@/public/assets/learning-pathways-3.png";
+import Image1 from "@/public/assets/core-edu-6.png";
+import Image2 from "@/public/assets/04.webp";
+import Image3 from "@/public/assets/core-edu-14.png";
 
 const tabs = [
     {

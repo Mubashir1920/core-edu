@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 
-import BenfitsImg1 from '@/public/assets/benefits-1.png'
+import BenfitsImg1 from '@/public/assets/core-edu-13.png'
 
 export default function BenefitsAbout() {
     // Animation variants

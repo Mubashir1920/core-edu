@@ -10,9 +10,9 @@ import { PiHandshakeThin, PiPaintBrushBroadThin } from "react-icons/pi";
 import { MdConnectedTv, MdOutlineMessage } from "react-icons/md";
 import Image from "next/image"
 
-import PathwaysImg from "@/public/assets/pathways-1.png"
-import PathwaysImg2 from "@/public/assets/pathways-2.png"
-import PathwaysImg3 from "@/public/assets/pathways-3.png"
+import PathwaysImg from "@/public/assets/core-edu-8.png"
+import PathwaysImg2 from "@/public/assets/core-edu-10.png"
+import PathwaysImg3 from "@/public/assets/core-edu-9.png"
 import { FaPeopleRoof } from "react-icons/fa6"
 import GetStartedBtn from "./GetStartedBtn"
 

@@ -1,8 +1,8 @@
 import { FiArrowDownRight } from "react-icons/fi";
 import Image from "next/image"
 
-import HeroBg1 from '@/public/assets/abouthero-1.png'
-import HeroBg2 from '@/public/assets/abouthero-2.png'
+import HeroBg1 from '@/public/assets/core-edu-3.png'
+import HeroBg2 from '@/public/assets/core-edu-4.png'
 import { LuNotebookPen } from "react-icons/lu";
 import GetStartedBtn from "./GetStartedBtn";
 
