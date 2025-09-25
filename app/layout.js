@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTop";
 import siteMetaData from "./utils/siteMetaData";
 
+import Analytics from "./components/Analytics";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -53,6 +55,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body className={` ${inter.className} antialiased`}>
         <SmoothScrolling>
+          <Analytics/>
           <Navbar />
           {children}
           <ScrollToTopButton />
