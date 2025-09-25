@@ -8,6 +8,7 @@ import ScrollToTopButton from "./components/ScrollToTop";
 import siteMetaData from "./utils/siteMetaData";
 
 import Analytics from "./components/Analytics";
+import Hotjar from "./components/Hotjar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -55,7 +56,8 @@ export default function RootLayout({ children }) {
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body className={` ${inter.className} antialiased`}>
         <SmoothScrolling>
-          <Analytics/>
+          <Hotjar />
+          <Analytics />
           <Navbar />
           {children}
           <ScrollToTopButton />
